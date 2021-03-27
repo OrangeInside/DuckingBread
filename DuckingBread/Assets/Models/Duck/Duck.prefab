@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5683058985166801019}
   - component: {fileID: 8362953119193676970}
   - component: {fileID: 5131753821963760773}
+  - component: {fileID: 2068064085295660711}
   m_Layer: 0
   m_Name: 12248_Bird_v1
   m_TagString: Untagged
@@ -79,6 +80,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2068064085295660711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5535543195698505544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5647f667dc28f4086ffed5ea53b20b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8719433914377804027
 GameObject:
   m_ObjectHideFlags: 0

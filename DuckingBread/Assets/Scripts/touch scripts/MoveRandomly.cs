@@ -20,6 +20,8 @@ public class MoveRandomly : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         path = new NavMeshPath();
+      //  navMeshAgent.updateRotation = false;
+ 
     }
 
     // Update is called once per frame
@@ -44,6 +46,11 @@ public class MoveRandomly : MonoBehaviour
         yield return new WaitForSeconds(timeForNewPath);
         GetNewPath();
         validPath = navMeshAgent.CalculatePath(target, path);
+        if (navMeshAgent.velocity.sqrMagnitude > Mathf.Epsilon)
+        {
+            transform.rotation = Quaternion.LookRotation(navMeshAgent.velocity.normalized);
+        }
+
         if (!validPath) Debug.Log("found invalid path");
         while (!validPath)
         {
@@ -58,8 +65,8 @@ public class MoveRandomly : MonoBehaviour
     {
         target = getNewRandomPosition();
         navMeshAgent.SetDestination(target);
-        Quaternion rotTrget = Quaternion.LookRotation(target - this.transform.position);
-        this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotTrget, Speed * Time.deltaTime);
+        //Quaternion rotTrget = Quaternion.LookRotation(target - this.transform.position);
+        //this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotTrget, Speed * Time.deltaTime);
 
     }
 }
