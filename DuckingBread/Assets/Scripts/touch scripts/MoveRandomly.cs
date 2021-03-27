@@ -13,7 +13,7 @@ public class MoveRandomly : MonoBehaviour
     bool inCoRoutine;
     Vector3 target;
     bool validPath;
-
+    public float Speed = 20f;
 
     // Use this for initialization
     void Start()
@@ -31,10 +31,10 @@ public class MoveRandomly : MonoBehaviour
     Vector3 getNewRandomPosition()
     // setting these ranges is vital larger seems better 
     {
-        float x = Random.Range(-300, 300);
+        float x = Random.Range(-100, 100);
         //   float y = Random.Range(-20, 20);
-        float z = Random.Range(-300, 300);
-        Vector3 pos = new Vector3(x, 0, z);
+        float z = Random.Range(-100, 100);
+        Vector3 pos = new Vector3(x, (float)0, z);
         return pos;
 
     }
@@ -47,7 +47,7 @@ public class MoveRandomly : MonoBehaviour
         if (!validPath) Debug.Log("found invalid path");
         while (!validPath)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.1f);
             GetNewPath();
             validPath = navMeshAgent.CalculatePath(target, path);
         }
@@ -58,6 +58,9 @@ public class MoveRandomly : MonoBehaviour
     {
         target = getNewRandomPosition();
         navMeshAgent.SetDestination(target);
+        Quaternion rotTrget = Quaternion.LookRotation(target - this.transform.position);
+        this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotTrget, Speed * Time.deltaTime);
+
     }
 }
 
