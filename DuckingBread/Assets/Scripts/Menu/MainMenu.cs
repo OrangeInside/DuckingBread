@@ -4,13 +4,10 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
-	 string levelToLoad = "SampleScene";
+	string levelToLoad = "SampleScene";
 	
 	public SceneFader sceneFader;
-	public void Start()
-	{
-		Cursor.lockState = CursorLockMode.Confined;
-	}
+
 	public void Play ()
 	{
 		sceneFader.FadeTo(levelToLoad);
