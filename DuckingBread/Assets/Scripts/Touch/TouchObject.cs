@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TouchObject : MonoBehaviour
 {
-
-
     // Update is called once per frame
     void Update()
     {
@@ -32,7 +30,7 @@ public class TouchObject : MonoBehaviour
                 if (hit.collider != null)
                 {
                     Color newColor = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
-                    hit.collider.GetComponent<MeshRenderer>().material.color = newColor;
+                    hit.collider.GetComponentInChildren<MeshRenderer>().material.color = newColor;
                 }
             }
         }
