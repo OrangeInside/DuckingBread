@@ -6,9 +6,13 @@ public class MainMenu : MonoBehaviour {
 
 	string levelToLoad = "SampleScene";
 	
-	public SceneFader sceneFader;
+	private SceneFader sceneFader;
 
-	public void Play ()
+    private void Start()
+    {
+		sceneFader = FindObjectOfType<SceneFader>();
+    }
+    public void Play ()
 	{
 		sceneFader.FadeTo(levelToLoad);
 	}
