@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
-	string levelToLoad = "SampleScene";
+	[SerializeField]
+	string playLevel = "Level1";
 	
 	private SceneFader sceneFader;
 
@@ -14,7 +15,7 @@ public class MainMenu : MonoBehaviour {
     }
     public void Play ()
 	{
-		sceneFader.FadeTo(levelToLoad);
+		sceneFader.FadeTo(playLevel);
 	}
 	public void Tutorial()
 	{
