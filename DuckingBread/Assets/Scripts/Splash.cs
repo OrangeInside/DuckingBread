@@ -7,11 +7,17 @@ public class Splash : MonoBehaviour
     public float power = 3.0f;
     public float radius = 5.0f;
     public float upforce = 1.0f;
-    public int destroyTime = 1; 
+    public int destroyTime = 1;
+  
+
     // Start is called before the first frame update
     void Start()
     {
+
+       
+        this.GetComponent<AudioManager>().PlaySound("Splash1");
         this.Detonate();
+
        
     }
 
@@ -27,6 +33,7 @@ public class Splash : MonoBehaviour
     {
         Vector3 explosionPosition = this.transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPosition, radius);
+        
         foreach(Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
