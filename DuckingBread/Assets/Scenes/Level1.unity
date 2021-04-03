@@ -755,6 +755,7 @@ GameObject:
   - component: {fileID: 1802794052}
   - component: {fileID: 1802794056}
   - component: {fileID: 1802794057}
+  - component: {fileID: 1802794058}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Walkable
@@ -863,6 +864,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 3048296228738296045, guid: b30a083631e354442bd1e7b7271c10b8, type: 3}
   MainCamera: {fileID: 963194227}
+--- !u!114 &1802794058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802794051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255be666cf2b4324cbd6034dd384c60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveFrequency: 0.53
+  waveHeight: 0.1
+  waveLength: 0.71
+  edgeBlend: 1
+  forceFlatShading: 1
 --- !u!1001 &1811608645
 PrefabInstance:
   m_ObjectHideFlags: 0
