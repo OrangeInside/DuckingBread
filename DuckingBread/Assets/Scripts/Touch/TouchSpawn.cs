@@ -22,7 +22,7 @@ public class TouchSpawn : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray,out hit))
             {
-                Instantiate(prefab, new Vector3(hit.point.x, hit.point.y +prefab.transform.position.y, hit.point.z), Quaternion.identity);
+                Instantiate(prefab, new Vector3(hit.point.x, hit.point.y +prefab.transform.position.y+5, hit.point.z), Quaternion.identity);
             }
            
         }

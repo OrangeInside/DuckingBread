@@ -33,9 +33,9 @@ public class MoveRandomly : MonoBehaviour
     Vector3 getNewRandomPosition()
     // setting these ranges is vital larger seems better 
     {
-        float x = Random.Range(-100, 100);
+        float x = Random.Range(this.transform.position.x-10, this.transform.position.x + 10);
         //   float y = Random.Range(-20, 20);
-        float z = Random.Range(-100, 100);
+        float z = Random.Range(this.transform.position.z - 10, this.transform.position.z + 10);
         Vector3 pos = new Vector3(x, (float)0, z);
         return pos;
 

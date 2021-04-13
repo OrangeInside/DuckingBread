@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1116ddbd483cdf047ae1d4c94d3d2423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForNewPath: 0.2
+  timeForNewPath: 3
   Speed: 20
 --- !u!208 &246598298164919066
 NavMeshObstacle:

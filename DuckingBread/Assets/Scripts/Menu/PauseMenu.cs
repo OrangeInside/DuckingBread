@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour {
 
 	void Update ()
 	{
-		if (Input.GetKeyDown(KeyCode.CapsLock) )
+		if (Input.GetKeyDown(KeyCode.Escape) )
 		{
 			Cursor.lockState = CursorLockMode.Confined;
 			Toggle();
@@ -22,7 +22,8 @@ public class PauseMenu : MonoBehaviour {
 	public void Toggle ()
 	{
 		ui.SetActive(!ui.activeSelf);
-
+		TouchSpawn x = FindObjectOfType<TouchSpawn>();
+		x.enabled = !x.enabled;
 		if (ui.activeSelf)
 		{
 			Time.timeScale = 0f;
