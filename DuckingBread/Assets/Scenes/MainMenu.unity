@@ -519,6 +519,11 @@ PrefabInstance:
       propertyPath: sceneFader
       value: 
       objectReference: {fileID: 910693882}
+    - target: {fileID: 888108604737442717, guid: b3bd0660b255cd94c94de9c8edf4cff8,
+        type: 3}
+      propertyPath: playLevel
+      value: LevelSelect
+      objectReference: {fileID: 0}
     - target: {fileID: 888108604737442718, guid: b3bd0660b255cd94c94de9c8edf4cff8,
         type: 3}
       propertyPath: m_Name
