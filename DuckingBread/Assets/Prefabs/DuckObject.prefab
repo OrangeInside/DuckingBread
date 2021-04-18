@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 246598298164919058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.526, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8153311405689110322}
   m_Father: {fileID: 0}
@@ -71,7 +71,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 246598298164919058}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1116ddbd483cdf047ae1d4c94d3d2423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForNewPath: 1
+  timeForNewPath: 0.5
   Speed: 20
 --- !u!208 &246598298164919066
 NavMeshObstacle:

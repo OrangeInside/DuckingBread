@@ -7,7 +7,9 @@ public class TouchSpawn : MonoBehaviour
 {
     public GameObject prefab;
     public Camera MainCamera;
-    // Start is called before the first frame update
+
+    [SerializeField] private LayerMask touchDetectionLayer;
+
     void Start()
     {
         MainCamera = Camera.main;
@@ -19,10 +21,12 @@ public class TouchSpawn : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Ray ray = MainCamera.ScreenPointToRay(Input.mousePosition);
+
             RaycastHit hit;
-            if(Physics.Raycast(ray,out hit))
+
+            if(Physics.Raycast(ray, out hit, Mathf.Infinity, touchDetectionLayer))
             {
-                Instantiate(prefab, new Vector3(hit.point.x, hit.point.y +prefab.transform.position.y+5, hit.point.z), Quaternion.identity);
+                Instantiate(prefab, hit.point, Quaternion.identity);
             }
            
         }
