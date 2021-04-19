@@ -39,8 +39,6 @@ public class AudioManager : MonoBehaviour {
 	[SerializeField]
 	Sound[] sounds;
 
-	
-
 	void Start ()
 	{
 		for (int i = 0; i < sounds.Length; i++)
@@ -61,9 +59,13 @@ public class AudioManager : MonoBehaviour {
 				return;
 			}
 		}
-
 		// no sound with _name
 		Debug.LogWarning("AudioManager: Sound not found in list, " + _name);
+	}
+
+	public void PlayRandomSound()
+	{
+		sounds[Random.Range(0, sounds.Length)].Play();
 	}
 
 }

@@ -111,7 +111,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Splash1
-    clip: {fileID: 8300000, guid: 4e3ee88ec1286bb4690b0517cc73dfa0, type: 3}
+    clip: {fileID: 8300000, guid: bd7f0bc7a47d0684499c66154a6e521c, type: 3}
+    volume: 0.271
+    pitch: 0.624
+    randomVolume: 0.018
+    randomPitch: 0.023
+  - name: Splash2
+    clip: {fileID: 8300000, guid: fc2aeeb0e7275a84ab8cff55ef248c40, type: 3}
     volume: 0.271
     pitch: 0.624
     randomVolume: 0.018

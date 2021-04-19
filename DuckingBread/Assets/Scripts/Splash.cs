@@ -13,12 +13,8 @@ public class Splash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-       
-        this.GetComponent<AudioManager>().PlaySound("Splash1");
+        this.GetComponent<AudioManager>().PlayRandomSound();
         this.Detonate();
-
-       
     }
 
     // Update is called once per frame
@@ -26,9 +22,8 @@ public class Splash : MonoBehaviour
     {
         this.Detonate();
         Destroy(gameObject, destroyTime);
-
-
     }
+
     void Detonate()
     {
         Vector3 explosionPosition = this.transform.position;
@@ -37,9 +32,8 @@ public class Splash : MonoBehaviour
         foreach(Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
-                if(rb!=null)
+            if(rb != null)
             {
-              
                 rb.AddExplosionForce(power, explosionPosition, radius, upforce, ForceMode.VelocityChange);
             }
         }
