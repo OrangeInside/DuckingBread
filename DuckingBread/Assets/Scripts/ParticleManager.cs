@@ -7,12 +7,20 @@ public class ParticleManager : MonoBehaviour
 {
 	// If true, deactivate the object instead of destroying it
 	public bool OnlyDeactivate;
-	
+	ParticleSystem ps;
+
 	void OnEnable()
 	{
+		ps = this.GetComponent<ParticleSystem>();
 		StartCoroutine("CheckIfAlive");
+		StartCoroutine("PlaySplash");
 	}
-	
+	IEnumerator PlaySplash()
+    {
+		yield return new WaitForSeconds(0.5f);
+		ps.Play();
+		StartCoroutine("PlaySplash");
+	}
 	IEnumerator CheckIfAlive ()
 	{
 		ParticleSystem ps = this.GetComponent<ParticleSystem>();
