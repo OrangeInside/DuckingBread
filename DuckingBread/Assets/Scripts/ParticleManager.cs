@@ -13,11 +13,11 @@ public class ParticleManager : MonoBehaviour
 	{
 		ps = this.GetComponent<ParticleSystem>();
 		StartCoroutine("CheckIfAlive");
-		StartCoroutine("PlaySplash");
+		//StartCoroutine("PlaySplash");
 	}
 	IEnumerator PlaySplash()
     {
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.2f);
 		ps.Play();
 		StartCoroutine("PlaySplash");
 	}

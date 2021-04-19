@@ -7,7 +7,7 @@ public class Splash : MonoBehaviour
     public float power = 3.0f;
     public float radius = 5.0f;
     public float upforce = 1.0f;
-    public int destroyTime = 1;
+    public float destroyTime = 1;
   
 
     // Start is called before the first frame update
