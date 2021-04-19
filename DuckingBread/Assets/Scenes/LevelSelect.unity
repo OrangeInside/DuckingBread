@@ -1744,6 +1744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 492422542}
@@ -1751,6 +1756,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnimationTriggers.m_PressedTrigger
       value: PressedSmaller
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 224305341502267110, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
@@ -1994,7 +2024,7 @@ GameObject:
   - component: {fileID: 1658884940}
   - component: {fileID: 1658884939}
   m_Layer: 5
-  m_Name: UI Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
