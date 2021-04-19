@@ -38,4 +38,9 @@ public class Splash : MonoBehaviour
             }
         }
     }
+
+    private void OnDestroy()
+    {
+        DucksManager.Instance?.RemoveSplashReference(this);
+    }
 }

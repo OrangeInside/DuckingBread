@@ -36,23 +36,38 @@ public class DuckMovement : MonoBehaviour
 
     private void Update()
     {
-        float distanceToDestPoint = Vector3.Distance(destinationPoint, this.transform.position);
+        if (customPathForced)
+        {
+            customPathCurrentTime += Time.deltaTime;
+            navMeshAgent.SetDestination(this.transform.position + customPathDirection);
+            navMeshAgent.speed = (speed * 3.0f) * (customPathDuration - customPathCurrentTime / customPathDuration);
 
-        if (distanceToDestPoint < minDistanceToReachPoint)
-        {
-            SetDestinationPoint();
-        }
-        else if (distanceToDestPoint < brakeDistance)
-        {
-            if (navMeshAgent)
+            if (customPathCurrentTime >= customPathDuration)
             {
-                navMeshAgent.speed = speed * (distanceToDestPoint / brakeDistance);
+                customPathForced = false;
+                ResetMovement();
             }
         }
-        else if (navMeshAgent && navMeshAgent.speed < speed)
+        else
         {
-            navMeshAgent.speed += Time.deltaTime;
-            navMeshAgent.speed = Mathf.Min(navMeshAgent.speed, speed);
+            float distanceToDestPoint = Vector3.Distance(destinationPoint, this.transform.position);
+
+            if (distanceToDestPoint < minDistanceToReachPoint)
+            {
+                SetDestinationPoint();
+            }
+            else if (distanceToDestPoint < brakeDistance)
+            {
+                if (navMeshAgent)
+                {
+                    navMeshAgent.speed = speed * (distanceToDestPoint / brakeDistance);
+                }
+            }
+            else if (navMeshAgent && navMeshAgent.speed < speed)
+            {
+                navMeshAgent.speed += Time.deltaTime;
+                navMeshAgent.speed = Mathf.Min(navMeshAgent.speed, speed);
+            }
         }
     }
 
@@ -72,6 +87,11 @@ public class DuckMovement : MonoBehaviour
         }
     }
 
+    private void ResetMovement()
+    {
+        navMeshAgent.SetDestination(destinationPoint);
+    }
+
     private Vector3 GetDestinationPoint()
     {
         Vector3 point = Vector3.zero;
@@ -80,6 +100,28 @@ public class DuckMovement : MonoBehaviour
         point.y = this.transform.position.y;
 
         return point;
+    }
+
+    private bool customPathForced = false;
+    private float customPathCurrentTime = 0.0f;
+    private float customPathDuration = 0.0f;
+    private Vector3 customPathDirection = Vector3.zero;
+    public void ForcePathChange(Vector3 direction, float time)
+    {
+        direction.y = 0.0f;
+
+        //navMeshAgent.enabled = false;
+        //navMeshAgent.updatePosition = false;
+        //navMeshAgent.updateRotation = false;
+        //navMeshAgent.isStopped = true;
+
+        customPathForced = true;
+
+        customPathCurrentTime = 0.0f;
+        customPathDuration = time;
+        customPathDirection = direction.normalized;
+
+        navMeshAgent.SetDestination(this.transform.position + customPathDirection);
     }
 }
 
