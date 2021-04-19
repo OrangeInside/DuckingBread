@@ -85,6 +85,8 @@ public class DuckMovement : MonoBehaviour
     {
         Vector3 previousDestinationPoint = destinationPoint;
 
+        speed = Random.Range(minSpeed, maxSpeed);
+
         do
         {
             destinationPoint = GetDestinationPoint();

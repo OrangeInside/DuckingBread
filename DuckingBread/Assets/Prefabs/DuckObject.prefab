@@ -89,8 +89,9 @@ MonoBehaviour:
   minDistanceToReachPoint: 0.5
   minDistanceBetweenNextPoint: 10
   brakeDistance: 5
-  minSpeed: 0.9
-  maxSpeed: 1.1
+  maxTimeToReachDestination: 10
+  minSpeed: 1.5
+  maxSpeed: 3
   minIdleStateTime: 0.25
   maxIdleStateTime: 0.5
 --- !u!208 &246598298164919066
