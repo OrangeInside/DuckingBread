@@ -828,7 +828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0.866}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.866}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1202,7 +1202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -39.600098}
+  m_AnchoredPosition: {x: -67.7, y: -58.9}
   m_SizeDelta: {x: 66.543594, y: 51.503265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3867141802449072543
@@ -1467,7 +1467,7 @@ PrefabInstance:
     - target: {fileID: 4248526012085023224, guid: eb217411698d4ca438da92158df08ffd,
         type: 3}
       propertyPath: m_Name
-      value: Play Button
+      value: Continue Button
       objectReference: {fileID: 0}
     - target: {fileID: 4248526012085023225, guid: eb217411698d4ca438da92158df08ffd,
         type: 3}
@@ -1576,8 +1576,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248526012085023226, guid: eb217411698d4ca438da92158df08ffd,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248526012085023226, guid: eb217411698d4ca438da92158df08ffd,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248526012085023226, guid: eb217411698d4ca438da92158df08ffd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 538680239249280077}
+    - target: {fileID: 4248526012085023226, guid: eb217411698d4ca438da92158df08ffd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248526012085023226, guid: eb217411698d4ca438da92158df08ffd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248526012085023226, guid: eb217411698d4ca438da92158df08ffd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248526012085023226, guid: eb217411698d4ca438da92158df08ffd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb217411698d4ca438da92158df08ffd, type: 3}

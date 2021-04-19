@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour {
 
 	public GameObject ui;
+	public GameObject continueButton;
+	public Color defaultButtonColor;
 
 	public string menuSceneName = "MainMenu";
 
@@ -13,19 +15,23 @@ public class PauseMenu : MonoBehaviour {
 	{
 		if (Input.GetKeyDown(KeyCode.Escape) )
 		{
+
 			Toggle();
 		}
 	}
 
-	public void Toggle ()
+    public void Toggle ()
 	{
+		continueButton.GetComponent<Image>().color = defaultButtonColor;
+
 		ui.SetActive(!ui.activeSelf);
 		TouchSpawn x = FindObjectOfType<TouchSpawn>();
 		x.enabled = !x.enabled;
 		if (ui.activeSelf)
 		{
 			Time.timeScale = 0f;
-		} else
+		} 
+		else
 		{
 			Time.timeScale = 1f;
 		}
@@ -40,7 +46,6 @@ public class PauseMenu : MonoBehaviour {
 	public void Menu ()
 	{
 		Toggle();
-		
 		sceneFader.FadeTo("MainMenu");
 	}
 

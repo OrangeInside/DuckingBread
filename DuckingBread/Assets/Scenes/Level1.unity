@@ -447,6 +447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 274970737340703188}
+  continueButton: {fileID: 1339989281}
+  defaultButtonColor: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 0}
   menuSceneName: MainMenu
   sceneFader: {fileID: 1190818412}
 --- !u!4 &369291247
@@ -902,6 +904,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a9e08fcf0693648a2903cbd68d7fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1339989281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1595779275951848286, guid: 4d855e88e4568c848b560f7b06078db0,
+    type: 3}
+  m_PrefabInstance: {fileID: 335837851237756313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1399320801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,6 +1580,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 369291246}
+    - target: {fileID: 538680239249280077, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1595779275951848284, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
