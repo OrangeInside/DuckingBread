@@ -245,6 +245,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DuckObject (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919058, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: timeForNewPath
@@ -1234,6 +1239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DuckObject (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919058, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: timeForNewPath
@@ -1344,8 +1354,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
-      propertyPath: timeForNewPath
-      value: 1
+      propertyPath: brakeDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919069, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: m_Speed
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919069, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919069, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919069, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
@@ -1355,7 +1385,7 @@ PrefabInstance:
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.526
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
