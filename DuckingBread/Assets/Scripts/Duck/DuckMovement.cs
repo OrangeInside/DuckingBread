@@ -12,6 +12,7 @@ public class DuckMovement : MonoBehaviour
     [SerializeField] private float minDistanceToReachPoint = 0.5f;
     [SerializeField] private float minDistanceBetweenNextPoint = 10.0f;
     [SerializeField] private float brakeDistance = 2.0f;
+    [SerializeField] private float maxTimeToReachDestination = 10.0f;
     [Space(10)]
     [SerializeField] private float minSpeed = 0.8f;
     [SerializeField] private float maxSpeed = 1.1f;
@@ -21,6 +22,7 @@ public class DuckMovement : MonoBehaviour
     private Vector3 destinationPoint = Vector3.zero;
     private NavMeshAgent navMeshAgent = null;
     private float speed = 3.0f;
+    private float currentTimeToReachDestination = 0.0f;
 
     private void Awake()
     {
@@ -50,6 +52,14 @@ public class DuckMovement : MonoBehaviour
         }
         else
         {
+            currentTimeToReachDestination += Time.deltaTime;
+
+            if (currentTimeToReachDestination > maxTimeToReachDestination)
+            {
+                destinationPoint = this.transform.position;
+                SetDestinationPoint();
+            }
+
             float distanceToDestPoint = Vector3.Distance(destinationPoint, this.transform.position);
 
             if (distanceToDestPoint < minDistanceToReachPoint)
@@ -85,6 +95,8 @@ public class DuckMovement : MonoBehaviour
         {
             navMeshAgent.SetDestination(destinationPoint);
         }
+
+        currentTimeToReachDestination = 0.0f;
     }
 
     private void ResetMovement()
