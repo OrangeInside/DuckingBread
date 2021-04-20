@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DuckBrain : MonoBehaviour
 {
     [SerializeField] private float distanceToStartEatingBread = 0.5f;
     [SerializeField] private float timeToEat = 1.0f;
+    [SerializeField] private GameObject eatingBarObject;
+    [SerializeField] private Image eatingBar;
 
     private DuckMovement duckMovement = null;
     private DuckHunger duckHunger = null;
@@ -50,7 +53,7 @@ public class DuckBrain : MonoBehaviour
             if (isEating)
             {
                 currentEatingTime += Time.deltaTime;
-
+                eatingBar.fillAmount = currentEatingTime / timeToEat;
                 if (currentEatingTime >= timeToEat)
                 {
                     isEating = false;
@@ -58,11 +61,14 @@ public class DuckBrain : MonoBehaviour
                     foodTarget.ConsumeFood(this);
 
                     duckMovement.EnableMovement();
+
+                    eatingBarObject.SetActive(false);
                 }
             }    
             else if (Vector3.Distance(foodTarget.transform.position, this.transform.position) < distanceToStartEatingBread && !isEating && !duckMovement.CustomPathForced)
             {
                 isEating = true;
+                eatingBarObject.SetActive(true);
                 currentEatingTime = 0.0f;
                 duckMovement.DisableMovement();
             }
@@ -132,6 +138,7 @@ public class DuckBrain : MonoBehaviour
             if (isEating)
             {
                 isEating = false;
+                eatingBarObject.SetActive(false);
                 duckMovement.EnableMovement();
             }
         }
@@ -147,6 +154,7 @@ public class DuckBrain : MonoBehaviour
         if (isEating)
         {
             isEating = false;
+            eatingBarObject.SetActive(false);
         }
     }
 }
