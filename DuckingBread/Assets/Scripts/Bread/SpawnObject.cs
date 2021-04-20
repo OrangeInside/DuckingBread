@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class SpawnObject : MonoBehaviour
 {
+
 	#region Variables
 	// needed for spawning
 	[SerializeField]
@@ -14,8 +15,9 @@ public class SpawnObject : MonoBehaviour
 
 	[SerializeField]
 	GameObject plane;
-	
+
 	// spawn control
+	public bool onCommand = false;
 	const float MinSpawnDelay = 1;
 	const float MaxSpawnDelay = 5;
 	Timer spawnTimer;
@@ -51,6 +53,7 @@ public class SpawnObject : MonoBehaviour
     /// </summary>
     void Update()
     {
+		if(!onCommand)
 		// check for time to spawn a new enemy
 		if (spawnTimer.Finished)
         {
@@ -62,7 +65,17 @@ public class SpawnObject : MonoBehaviour
 		}
 		
 	}
+	/// <summary>
+	/// Spawns number of objects at a random location on a plane
+	/// </summary>
+	void SpawnOnCommand(int amount)
+    {
+		for(int i=0;i<amount;i++)
+        {
+			objectSpawn();
+		}
 	
+	}
 	/// <summary>
 	/// Spawns an object at a random location on a plane
 	/// </summary>
