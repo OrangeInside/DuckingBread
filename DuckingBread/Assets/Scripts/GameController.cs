@@ -36,10 +36,15 @@ public class GameController : MonoBehaviour
             {
                 seedLevel = maxSeedLevel;
                 UIManager.Instance.ToggleSeedButton(true);
-            }
-               
+            }    
 
             UIManager.Instance.UpdateUI();
         }
+    }
+
+    public void ClearSeedLevel()
+    {
+        seedLevel = 0;
+        UIManager.Instance.UpdateUI();
     }
 }
