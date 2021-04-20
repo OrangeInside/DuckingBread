@@ -39,15 +39,13 @@ public class Object : MonoBehaviour
 
                 //StartCoroutine(KillBread()); 
                 //this.GetComponent<AudioManager>().PlayRandomSound();
-               
-                 splash.GetComponent<ParticleSystem>().Play();
+
+                /*splash.GetComponent<ParticleSystem>().Play();
                 splash.GetComponent<ParticleManager>().Kill = true;
-                Destroy(gameObject,1f);
+                Destroy(gameObject,1f);*/
+                Destroy(this.gameObject);
             }
         }
         
     }
- 
-
-
 }
