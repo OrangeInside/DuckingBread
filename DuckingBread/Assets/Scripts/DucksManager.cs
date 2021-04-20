@@ -29,7 +29,7 @@ public class DucksManager : MonoBehaviour
         }
     }
 
-    public void RemoveFoodReference(GameObject food)
+    public void RemoveFoodReference(Food food)
     {
         foreach (DuckBrain db in ducksInLake)
         {

@@ -13,9 +13,11 @@ public class FoodDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Food")
+        Food food = other.GetComponent<Food>();
+
+        if (food)
         {
-            brain?.SetFoodInRange(other.gameObject);
+            brain?.SetFoodInRange(food);
         }
     }
 }

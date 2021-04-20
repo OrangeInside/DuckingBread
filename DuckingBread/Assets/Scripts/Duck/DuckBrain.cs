@@ -7,11 +7,10 @@ public class DuckBrain : MonoBehaviour
     [SerializeField] private float distanceToStartEatingBread = 0.5f;
     [SerializeField] private float timeToEat = 1.0f;
 
-
     private DuckMovement duckMovement = null;
 
-    private List<GameObject> foodInRange = new List<GameObject>();
-    private GameObject foodTarget = null;
+    private List<Food> foodInRange = new List<Food>();
+    private Food foodTarget = null;
 
     private void Start()
     {
@@ -51,10 +50,9 @@ public class DuckBrain : MonoBehaviour
                 if (currentEatingTime >= timeToEat)
                 {
                     isEating = false;
-                    Destroy(foodTarget);
-                    GameController.Instance.DuckAteBread();
-                    //RemoveFoodReference(foodTarget);
-                   
+
+                    foodTarget.ConsumeFood(this);
+
                     duckMovement.EnableMovement();
                 }
             }    
@@ -73,7 +71,7 @@ public class DuckBrain : MonoBehaviour
             usedSplashes.Remove(splash);
     }
 
-    public void SetFoodInRange(GameObject food)
+    public void SetFoodInRange(Food food)
     {
         if (!foodInRange.Contains(food))
         {
@@ -85,9 +83,9 @@ public class DuckBrain : MonoBehaviour
 
     private void SetClosestFoodAsTarget()
     {
-        GameObject[] foodArray = foodInRange.ToArray();
+        Food[] foodArray = foodInRange.ToArray();
 
-        foreach (GameObject food in foodArray)
+        foreach (Food food in foodArray)
         {
             if (food == null)
                 continue;
@@ -107,7 +105,7 @@ public class DuckBrain : MonoBehaviour
 
         if (foodTarget)
         {
-            duckMovement?.SetFoodAsDestinationPoint(foodTarget);
+            duckMovement?.SetFoodAsDestinationPoint(foodTarget.gameObject);
         }
         else
         {
@@ -115,7 +113,7 @@ public class DuckBrain : MonoBehaviour
         }
     }
 
-    public void RemoveFoodReference(GameObject food)
+    public void RemoveFoodReference(Food food)
     {
         if (foodTarget == food)
         {
