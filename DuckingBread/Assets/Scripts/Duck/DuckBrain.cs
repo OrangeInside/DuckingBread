@@ -114,10 +114,15 @@ public class DuckBrain : MonoBehaviour
 
     public void RemoveFoodReference(GameObject food)
     {
-        if (isEating && foodTarget == food)
+        if (foodTarget == food)
         {
-            isEating = false;
-            duckMovement.EnableMovement();
+            foodTarget = null;
+
+            if (isEating)
+            {
+                isEating = false;
+                duckMovement.EnableMovement();
+            }
         }
 
         if (foodInRange.Contains(food))

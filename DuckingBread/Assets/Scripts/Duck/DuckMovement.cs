@@ -126,9 +126,9 @@ public class DuckMovement : MonoBehaviour
     private void ResetMovement()
     {
         if (foodTarget)
-            navMeshAgent.SetDestination(foodTarget.transform.position); 
+            navMeshAgent?.SetDestination(foodTarget.transform.position); 
         else
-            navMeshAgent.SetDestination(destinationPoint);
+            navMeshAgent?.SetDestination(destinationPoint);
     }
 
     private Vector3 GetDestinationPoint()
@@ -171,6 +171,7 @@ public class DuckMovement : MonoBehaviour
     {
         hasFoodAsDestinationPoint = false;
         foodTarget = null;
+        ResetMovement();
     }
 
     public void DisableMovement()
