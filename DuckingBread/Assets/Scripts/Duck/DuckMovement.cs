@@ -16,6 +16,8 @@ public class DuckMovement : MonoBehaviour
     [Space(10)]
     [SerializeField] private float minSpeed = 0.8f;
     [SerializeField] private float maxSpeed = 1.1f;
+    [SerializeField] private float acceleration = 3.0f;
+    [SerializeField] private float splashAcceleration = 9.0f;
     [SerializeField] private float minIdleStateTime = 0.25f;
     [SerializeField] private float maxIdleStateTime = 0.5f;
 
@@ -23,28 +25,36 @@ public class DuckMovement : MonoBehaviour
     private NavMeshAgent navMeshAgent = null;
     private float speed = 3.0f;
     private float currentTimeToReachDestination = 0.0f;
+    private DuckBrain brain = null;
 
     private GameObject foodTarget = null;
 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        brain = GetComponent<DuckBrain>();
     }
 
     private void Start()
     {
         SetDestinationPoint();
+
+        navMeshAgent.acceleration = acceleration;
     }
 
     private bool destPointReached = false;
 
     private void Update()
     {
+        Debug.Log(navMeshAgent.destination);
+
         if (customPathForced)
         {
             customPathCurrentTime += Time.deltaTime;
+
+            navMeshAgent.speed = speed * 3.0f;
+            navMeshAgent.acceleration = splashAcceleration;
             navMeshAgent.SetDestination(this.transform.position + customPathDirection);
-            navMeshAgent.speed = (speed * 3.0f) * (customPathDuration - customPathCurrentTime / customPathDuration);
 
             if (customPathCurrentTime >= customPathDuration)
             {
@@ -54,23 +64,11 @@ public class DuckMovement : MonoBehaviour
         }
         else
         {
+            navMeshAgent.speed = speed;
+            navMeshAgent.acceleration = acceleration;
+
             if (hasFoodAsDestinationPoint && foodTarget)
             {
-                float distToFood = Vector3.Distance(foodTarget.transform.position, this.transform.position);
-
-                if (distToFood < brakeDistance)
-                {
-                    if (navMeshAgent)
-                    {
-                        navMeshAgent.speed = speed * (distToFood / brakeDistance);
-                    }
-                }
-                else if (navMeshAgent && navMeshAgent.speed < speed)
-                {
-                    navMeshAgent.speed += Time.deltaTime;
-                    navMeshAgent.speed = Mathf.Min(navMeshAgent.speed, speed);
-                }
-
                 return;
             }
 
@@ -88,18 +86,6 @@ public class DuckMovement : MonoBehaviour
             {
                 SetDestinationPoint();
             }
-            else if (distanceToDestPoint < brakeDistance)
-            {
-                if (navMeshAgent)
-                {
-                    navMeshAgent.speed = speed * (distanceToDestPoint / brakeDistance);
-                }
-            }
-            else if (navMeshAgent && navMeshAgent.speed < speed)
-            {
-                navMeshAgent.speed += Time.deltaTime;
-                navMeshAgent.speed = Mathf.Min(navMeshAgent.speed, speed);
-            }
         }
     }
 
@@ -108,6 +94,7 @@ public class DuckMovement : MonoBehaviour
         Vector3 previousDestinationPoint = destinationPoint;
 
         speed = Random.Range(minSpeed, maxSpeed);
+        navMeshAgent.speed = speed;
 
         do
         {
@@ -145,8 +132,12 @@ public class DuckMovement : MonoBehaviour
     private float customPathCurrentTime = 0.0f;
     private float customPathDuration = 0.0f;
     private Vector3 customPathDirection = Vector3.zero;
+
     public void ForcePathChange(Vector3 direction, float time)
     {
+        EnableMovement();
+        brain?.InterruptEating();
+
         direction.y = 0.0f;
 
         customPathForced = true;
@@ -159,6 +150,8 @@ public class DuckMovement : MonoBehaviour
     }
 
     private bool hasFoodAsDestinationPoint = false;
+
+    public bool CustomPathForced { get => customPathForced; }
 
     public void SetFoodAsDestinationPoint(GameObject food)
     {

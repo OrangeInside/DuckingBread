@@ -58,7 +58,7 @@ public class DuckBrain : MonoBehaviour
                     duckMovement.EnableMovement();
                 }
             }    
-            else if (Vector3.Distance(foodTarget.transform.position, this.transform.position) < distanceToStartEatingBread && !isEating)
+            else if (Vector3.Distance(foodTarget.transform.position, this.transform.position) < distanceToStartEatingBread && !isEating && !duckMovement.CustomPathForced)
             {
                 isEating = true;
                 currentEatingTime = 0.0f;
@@ -131,8 +131,14 @@ public class DuckBrain : MonoBehaviour
         if (foodInRange.Contains(food))
             foodInRange.Remove(food);
 
-        //GameObject.Destroy(food);
-
         SetClosestFoodAsTarget();
+    }
+
+    public void InterruptEating()
+    {
+        if (isEating)
+        {
+            isEating = false;
+        }
     }
 }
