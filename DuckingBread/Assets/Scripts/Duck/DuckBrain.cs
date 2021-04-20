@@ -8,6 +8,7 @@ public class DuckBrain : MonoBehaviour
     [SerializeField] private float timeToEat = 1.0f;
 
     private DuckMovement duckMovement = null;
+    private DuckHunger duckHunger = null;
 
     private List<Food> foodInRange = new List<Food>();
     private Food foodTarget = null;
@@ -17,6 +18,7 @@ public class DuckBrain : MonoBehaviour
         DucksManager.Instance?.AddDuckReference(this);
 
         duckMovement = GetComponent<DuckMovement>();
+        duckHunger = GetComponent<DuckHunger>();
     }
 
     private List<Splash> usedSplashes = new List<Splash>();
@@ -38,6 +40,8 @@ public class DuckBrain : MonoBehaviour
     private bool isEating = false;
 
     private float currentEatingTime = 0.0f;
+
+    public DuckHunger DuckHunger { get => duckHunger; }
 
     private void Update()
     {
@@ -92,6 +96,9 @@ public class DuckBrain : MonoBehaviour
 
             if (foodTarget != null)
             {
+                if (food.Type == FoodType.Good && !duckHunger.IsHungry())
+                    continue;
+
                 if (Vector3.Distance(this.transform.position, food.transform.position) < Vector3.Distance(this.transform.position, foodTarget.transform.position))
                 {
                     foodTarget = food;
@@ -99,6 +106,9 @@ public class DuckBrain : MonoBehaviour
             }
             else
             {
+                if (food.Type == FoodType.Good && !duckHunger.IsHungry())
+                    continue;
+
                 foodTarget = food;
             }
         }

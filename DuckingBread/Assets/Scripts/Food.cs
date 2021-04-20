@@ -18,7 +18,7 @@ public class Food : MonoBehaviour
     {
         if (type == FoodType.Good)
         {
-            //duck is happy
+            consumer.DuckHunger?.IncreaseHungryPoints();
         }
         else if (type == FoodType.Bad)
         {
