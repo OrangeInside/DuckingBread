@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Walkable
-  - Bread
   - FxTemporaire
   - Duck
+  - Food
   layers:
   - Default
   - TransparentFX

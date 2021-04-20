@@ -28,4 +28,12 @@ public class DucksManager : MonoBehaviour
             db.RemoveSplashReference(splash);
         }
     }
+
+    public void RemoveFoodReference(GameObject food)
+    {
+        foreach (DuckBrain db in ducksInLake)
+        {
+            db.RemoveFoodReference(food);
+        }
+    }
 }

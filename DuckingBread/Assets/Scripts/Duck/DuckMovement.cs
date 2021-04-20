@@ -24,6 +24,8 @@ public class DuckMovement : MonoBehaviour
     private float speed = 3.0f;
     private float currentTimeToReachDestination = 0.0f;
 
+    private GameObject foodTarget = null;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -52,6 +54,26 @@ public class DuckMovement : MonoBehaviour
         }
         else
         {
+            if (hasFoodAsDestinationPoint && foodTarget)
+            {
+                float distToFood = Vector3.Distance(foodTarget.transform.position, this.transform.position);
+
+                if (distToFood < brakeDistance)
+                {
+                    if (navMeshAgent)
+                    {
+                        navMeshAgent.speed = speed * (distToFood / brakeDistance);
+                    }
+                }
+                else if (navMeshAgent && navMeshAgent.speed < speed)
+                {
+                    navMeshAgent.speed += Time.deltaTime;
+                    navMeshAgent.speed = Mathf.Min(navMeshAgent.speed, speed);
+                }
+
+                return;
+            }
+
             currentTimeToReachDestination += Time.deltaTime;
 
             if (currentTimeToReachDestination > maxTimeToReachDestination)
@@ -103,7 +125,10 @@ public class DuckMovement : MonoBehaviour
 
     private void ResetMovement()
     {
-        navMeshAgent.SetDestination(destinationPoint);
+        if (foodTarget)
+            navMeshAgent.SetDestination(foodTarget.transform.position); 
+        else
+            navMeshAgent.SetDestination(destinationPoint);
     }
 
     private Vector3 GetDestinationPoint()
@@ -124,11 +149,6 @@ public class DuckMovement : MonoBehaviour
     {
         direction.y = 0.0f;
 
-        //navMeshAgent.enabled = false;
-        //navMeshAgent.updatePosition = false;
-        //navMeshAgent.updateRotation = false;
-        //navMeshAgent.isStopped = true;
-
         customPathForced = true;
 
         customPathCurrentTime = 0.0f;
@@ -136,6 +156,31 @@ public class DuckMovement : MonoBehaviour
         customPathDirection = direction.normalized;
 
         navMeshAgent.SetDestination(this.transform.position + customPathDirection);
+    }
+
+    private bool hasFoodAsDestinationPoint = false;
+
+    public void SetFoodAsDestinationPoint(GameObject food)
+    {
+        hasFoodAsDestinationPoint = true;
+        foodTarget = food;
+        navMeshAgent.SetDestination(foodTarget.transform.position);
+    }
+
+    public void StopFollowingToFood()
+    {
+        hasFoodAsDestinationPoint = false;
+        foodTarget = null;
+    }
+
+    public void DisableMovement()
+    {
+        navMeshAgent.isStopped = true;
+    }
+
+    public void EnableMovement()
+    {
+        navMeshAgent.isStopped = false;
     }
 }
 
