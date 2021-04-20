@@ -6,6 +6,8 @@ public class DucksManager : MonoBehaviour
 {
     public static DucksManager Instance = null;
 
+    private int wellFedDucks = 0;
+
     private void Awake()
     {
         if (DucksManager.Instance == null)
@@ -34,6 +36,18 @@ public class DucksManager : MonoBehaviour
         foreach (DuckBrain db in ducksInLake)
         {
             db.RemoveFoodReference(food);
+        }
+    }
+
+    public void AddWellFedDuck()
+    {
+        wellFedDucks++;
+
+        //gain bonus life
+
+        if (wellFedDucks == ducksInLake.Count)
+        {
+            //game won
         }
     }
 }

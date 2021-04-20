@@ -16,7 +16,7 @@ public class DuckHunger : MonoBehaviour
 
         if (currentHungryPoints == requiredHungryPoints)
         {
-            //gain bonus life
+            DucksManager.Instance?.AddWellFedDuck();
         }
 
         if (currentHungryPoints > requiredHungryPoints)
