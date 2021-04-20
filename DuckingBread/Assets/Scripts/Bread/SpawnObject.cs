@@ -16,6 +16,8 @@ public class SpawnObject : MonoBehaviour
 	[SerializeField]
 	GameObject plane;
 
+	public int amountOfSpawns;
+
 	// spawn control
 	public bool onCommand = false;
 	const float MinSpawnDelay = 1;
@@ -68,9 +70,9 @@ public class SpawnObject : MonoBehaviour
 	/// <summary>
 	/// Spawns number of objects at a random location on a plane
 	/// </summary>
-	void SpawnOnCommand(int amount)
+	public void SpawnOnCommand()
     {
-		for(int i=0;i<amount;i++)
+		for(int i = 0; i < amountOfSpawns; i++)
         {
 			objectSpawn();
 		}

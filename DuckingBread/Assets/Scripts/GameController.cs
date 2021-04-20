@@ -33,7 +33,11 @@ public class GameController : MonoBehaviour
         {
             seedLevel += seedPerSecond * Time.deltaTime;
             if (seedLevel >= maxSeedLevel)
+            {
                 seedLevel = maxSeedLevel;
+                UIManager.Instance.ToggleSeedButton(true);
+            }
+               
 
             UIManager.Instance.UpdateUI();
         }

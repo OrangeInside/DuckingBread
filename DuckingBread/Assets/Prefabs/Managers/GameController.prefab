@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   ducks: []
-  timeToGetMaxSeed: 90
+  timeToGetMaxSeed: 5
   maxSeedLevel: 100
   seedPerSecond: 0.7
   seedLevel: 0

@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance = null;
     public Image seedBar;
     public TextMeshProUGUI livesValue;
-
+    public GameObject feedButton;
     private void Awake()
     {
         UIManager.Instance = this;
@@ -23,4 +23,10 @@ public class UIManager : MonoBehaviour
     {
         livesValue.text = "x" + GameController.Instance.lives;
     }
+
+    public void ToggleSeedButton(bool toggle)
+    {
+        feedButton.SetActive(toggle);
+    }
+        
 }
