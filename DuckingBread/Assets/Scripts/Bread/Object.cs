@@ -9,7 +9,7 @@ public class Object : MonoBehaviour
 {
     #region Variables
     // death support
-    const float EnemyLifespanSeconds = 10;
+    public float EnemyLifespanSeconds = 10;
     Timer deathTimer;
     public GameObject splash;
     #endregion

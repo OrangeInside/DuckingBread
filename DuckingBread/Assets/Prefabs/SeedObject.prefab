@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5100d07729ea114db90d002403378e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyLifespanSeconds: 30
   splash: {fileID: 8388583994455767119}
 --- !u!54 &2283897967789007945
 Rigidbody:

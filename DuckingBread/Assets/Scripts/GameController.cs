@@ -12,6 +12,11 @@ public class GameController : MonoBehaviour
     public float maxSeedLevel = 100;
     public float seedPerSecond = 0.5f;
     public float seedLevel = 0f;
+    public float feedingTime = 30;
+
+    public SpawnObject breadSpawner;
+    public float currentFeedingTime = 0;
+    private bool feeding = false;
 
     private void Awake()
     {
@@ -29,23 +34,64 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(seedLevel < maxSeedLevel)
+        if(seedLevel < maxSeedLevel && !feeding)
         {
             seedLevel += seedPerSecond * Time.deltaTime;
             if (seedLevel >= maxSeedLevel)
             {
                 seedLevel = maxSeedLevel;
+
+                FindAndDestroyAllBreads();
+                StopBreadSpawner();
                 UIManager.Instance.ToggleSeedButton(true);
             }    
 
             UIManager.Instance.UpdateUI();
         }
+
+        // no bread spawning during feeding time
+        if(feeding)
+        {
+            currentFeedingTime -= Time.deltaTime;
+
+            UIManager.Instance.UpdateTimer();
+            if (currentFeedingTime < 0)
+            {
+                feeding = false;
+                StartBreadSpawner();
+                UIManager.Instance.ToggleTimer(false);
+            }
+
+        }
+    }
+    public void FindAndDestroyAllBreads()
+    {
+        Food[] spawnedObjects = FindObjectsOfType<Food>();
+        foreach (var spawnedObject in spawnedObjects)
+        {
+            if (spawnedObject.Type == FoodType.Bad)
+            {
+                GameObject.Destroy(spawnedObject.gameObject);
+            }
+        }
+    }
+    public void StopBreadSpawner()
+    {
+        breadSpawner.onCommand = true;
     }
 
+    public void StartBreadSpawner()
+    {
+        breadSpawner.onCommand = false;
+    }
     public void ClearSeedLevel()
     {
         seedLevel = 0;
         UIManager.Instance.UpdateUI();
+        feeding = true;
+        currentFeedingTime = feedingTime;
+        UIManager.Instance.ToggleTimer(true);
+
     }
 
     public void DuckAteBread()

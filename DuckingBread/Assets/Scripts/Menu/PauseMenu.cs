@@ -15,7 +15,6 @@ public class PauseMenu : MonoBehaviour {
 	{
 		if (Input.GetKeyDown(KeyCode.Escape) )
 		{
-
 			Toggle();
 		}
 	}
@@ -39,14 +38,21 @@ public class PauseMenu : MonoBehaviour {
 
 	public void Retry ()
 	{
-		Toggle();
+		//Toggle();
+		Time.timeScale = 1f;
 		sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
 	public void Menu ()
 	{
-		Toggle();
+		//Toggle();
+		Time.timeScale = 1f;
 		sceneFader.FadeTo("MainMenu");
+	}
+
+	public void NextLevel()
+    {
+		sceneFader.FadeTo(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
 }

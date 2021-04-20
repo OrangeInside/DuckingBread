@@ -7,8 +7,6 @@ using UnityEngine;
 /// </summary>
 public class SpawnObject : MonoBehaviour
 {
-
-	#region Variables
 	// needed for spawning
 	[SerializeField]
 	GameObject spawnObject;
@@ -28,8 +26,6 @@ public class SpawnObject : MonoBehaviour
 	float randomX;
 	float randomY;
 	float randomZ;
-
-	#endregion
 
 	#region Methods
     /// <summary>
@@ -59,7 +55,7 @@ public class SpawnObject : MonoBehaviour
 		// check for time to spawn a new enemy
 		if (spawnTimer.Finished)
         {
-			objectSpawn();
+			ObjectSpawn();
 
 			// change spawn timer duration and restart
 			spawnTimer.Duration = Random.Range(MinSpawnDelay, MaxSpawnDelay);
@@ -74,14 +70,14 @@ public class SpawnObject : MonoBehaviour
     {
 		for(int i = 0; i < amountOfSpawns; i++)
         {
-			objectSpawn();
+			ObjectSpawn();
 		}
 	
 	}
 	/// <summary>
 	/// Spawns an object at a random location on a plane
 	/// </summary>
-	void objectSpawn()
+	public void ObjectSpawn()
 	{
 		// generate random location and create new object
 		Vector3 randomPosition = GetARandomPos(plane);
@@ -93,18 +89,19 @@ public class SpawnObject : MonoBehaviour
 	/// <summary>
 	/// Return random position on the plane
 	/// </summary>
-	public Vector3 GetARandomPos(GameObject plane){
+	public Vector3 GetARandomPos(GameObject plane)
+	{
 
-    Mesh planeMesh = plane.GetComponent<MeshFilter>().mesh;
-    Bounds bounds = planeMesh.bounds;
+		Mesh planeMesh = plane.GetComponent<MeshFilter>().mesh;
+		Bounds bounds = planeMesh.bounds;
 
-    float minX = plane.transform.position.x - plane.transform.localScale.x * bounds.size.x * 0.5f;
-    float minZ = plane.transform.position.z - plane.transform.localScale.z * bounds.size.z * 0.5f;
+		float minX = plane.transform.position.x - plane.transform.localScale.x * bounds.size.x * 0.5f;
+		float minZ = plane.transform.position.z - plane.transform.localScale.z * bounds.size.z * 0.5f;
 
-    Vector3 newVec = new Vector3(Random.Range (minX, -minX),
-                                 plane.transform.position.y,
-                                 Random.Range (minZ, -minZ));
-    return newVec;
+		Vector3 newVec = new Vector3(Random.Range (minX, -minX),
+									 plane.transform.position.y,
+									 Random.Range (minZ, -minZ));
+		return newVec;
 	}
 
 	#endregion

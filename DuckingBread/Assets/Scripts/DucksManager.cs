@@ -47,7 +47,7 @@ public class DucksManager : MonoBehaviour
 
         if (wellFedDucks == ducksInLake.Count)
         {
-            //game won
+            GameController.Instance.GameWon();
         }
     }
 }
