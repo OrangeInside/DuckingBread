@@ -47,4 +47,26 @@ public class GameController : MonoBehaviour
         seedLevel = 0;
         UIManager.Instance.UpdateUI();
     }
+
+    public void DuckAteBread()
+    {
+        if (lives > 0)
+        {
+            lives--;
+            UIManager.Instance.UpdateLives();
+
+            if (lives == 0)
+                GameLost();
+        }
+    }
+
+    public void GameLost()
+    {
+        UIManager.Instance.ToggleLostGameScreen(true);
+    }
+
+    public void GameWon()
+    {
+        UIManager.Instance.ToggleWonGameScreen(true);
+    }
 }

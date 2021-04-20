@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
     public Image seedBar;
     public TextMeshProUGUI livesValue;
     public GameObject feedButton;
+    public GameObject lostGameScreen;
+    public GameObject wonGameScreen;
     private void Awake()
     {
         UIManager.Instance = this;
@@ -28,5 +30,14 @@ public class UIManager : MonoBehaviour
     {
         feedButton.SetActive(toggle);
     }
-        
+    
+    public void ToggleLostGameScreen(bool toggle)
+    {
+        lostGameScreen.SetActive(toggle);
+    }
+
+    public void ToggleWonGameScreen(bool toggle)
+    {
+        wonGameScreen.SetActive(toggle);
+    }
 }

@@ -51,7 +51,10 @@ public class DuckBrain : MonoBehaviour
                 if (currentEatingTime >= timeToEat)
                 {
                     isEating = false;
-                    RemoveFoodReference(foodTarget);
+                    Destroy(foodTarget);
+                    GameController.Instance.DuckAteBread();
+                    //RemoveFoodReference(foodTarget);
+                   
                     duckMovement.EnableMovement();
                 }
             }    
@@ -127,6 +130,8 @@ public class DuckBrain : MonoBehaviour
 
         if (foodInRange.Contains(food))
             foodInRange.Remove(food);
+
+        //GameObject.Destroy(food);
 
         SetClosestFoodAsTarget();
     }
