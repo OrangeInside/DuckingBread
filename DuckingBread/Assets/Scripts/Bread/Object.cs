@@ -11,18 +11,20 @@ public class Object : MonoBehaviour
     // death support
     const float EnemyLifespanSeconds = 10;
     Timer deathTimer;
-
+    public GameObject splash;
     #endregion
 
     /// <summary>
     /// Use this for initialization
     /// </summary>
     void Start()
-    { 
+    {
         // create and start timer
+        
         deathTimer = gameObject.AddComponent<Timer>();
         deathTimer.Duration = EnemyLifespanSeconds;
-        deathTimer.Run(); 
+        deathTimer.Run();
+        this.GetComponent<AudioManager>().PlayRandomSound();
     }
 
     /// <summary>
@@ -33,11 +35,19 @@ public class Object : MonoBehaviour
         // destroy enemy if death timer finished
         if(deathTimer){
             if (deathTimer.Finished)
-            {    
-                Destroy(gameObject);       
+            {
+
+                //StartCoroutine(KillBread()); 
+                //this.GetComponent<AudioManager>().PlayRandomSound();
+               
+                 splash.GetComponent<ParticleSystem>().Play();
+                splash.GetComponent<ParticleManager>().Kill = true;
+                Destroy(gameObject,1f);
             }
         }
         
     }
-    
+ 
+
+
 }

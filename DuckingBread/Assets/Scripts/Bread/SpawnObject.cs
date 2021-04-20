@@ -36,9 +36,9 @@ public class SpawnObject : MonoBehaviour
 		plane = GameObject.FindWithTag("Walkable");
 
 		// save spawn boundaries for efficiency
-		float randomX = Random.Range (plane.transform.position.x - plane.transform.localScale.x / 2, plane.transform.position.x + plane.transform.localScale.x / 2);
+		float randomX = Random.Range (plane.transform.position.x - plane.transform.localScale.x / 2 + plane.transform.localScale.x / 9, plane.transform.position.x + plane.transform.localScale.x / 2 - plane.transform.localScale.x / 9);
 		float randomY = Random.Range (plane.transform.position.y - plane.transform.localScale.y / 2, plane.transform.position.y + plane.transform.localScale.y / 2);
-		float randomZ = Random.Range (plane.transform.position.y - plane.transform.localScale.z / 2, plane.transform.position.y + plane.transform.localScale.z / 2);
+		float randomZ = Random.Range (plane.transform.position.y - plane.transform.localScale.z / 2 + plane.transform.localScale.z / 9, plane.transform.position.y + plane.transform.localScale.z / 2- plane.transform.localScale.z / 9);
 
 		// create and start timer
 		spawnTimer = gameObject.AddComponent<Timer>();

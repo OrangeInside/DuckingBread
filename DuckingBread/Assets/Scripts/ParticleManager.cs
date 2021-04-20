@@ -6,9 +6,9 @@ using System.Collections;
 public class ParticleManager : MonoBehaviour
 {
 	// If true, deactivate the object instead of destroying it
-	public bool OnlyDeactivate;
+	public bool Deactivate;
 	ParticleSystem ps;
-
+	public bool Kill;
 	void OnEnable()
 	{
 		ps = this.GetComponent<ParticleSystem>();
@@ -27,10 +27,10 @@ public class ParticleManager : MonoBehaviour
 		
 		while(true && ps != null)
 		{
-			yield return new WaitForSeconds(0.5f);
+			yield return new WaitForSeconds(0.2f);
 			if(!ps.IsAlive(true))
 			{
-				if(OnlyDeactivate)
+				if(Deactivate)
 				{
 					#if UNITY_3_5
 						this.gameObject.SetActiveRecursively(false);
@@ -38,8 +38,12 @@ public class ParticleManager : MonoBehaviour
 						this.gameObject.SetActive(false);
 					#endif
 				}
-				else
+				if (Kill)
+				{
 					GameObject.Destroy(this.gameObject);
+				}
+				//else
+				//	GameObject.Destroy(this.gameObject);
 				break;
 			}
 		}
