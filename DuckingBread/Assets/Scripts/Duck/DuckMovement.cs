@@ -42,12 +42,8 @@ public class DuckMovement : MonoBehaviour
         navMeshAgent.acceleration = acceleration;
     }
 
-    private bool destPointReached = false;
-
     private void Update()
     {
-        Debug.Log(navMeshAgent.destination);
-
         if (customPathForced)
         {
             customPathCurrentTime += Time.deltaTime;
