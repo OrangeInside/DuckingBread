@@ -318,6 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3668dd0c429e44a890e98f7c6c97c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToStartEatingBread: 1.5
+  timeToEat: 1
 --- !u!114 &246598298164919068
 MonoBehaviour:
   m_ObjectHideFlags: 0
