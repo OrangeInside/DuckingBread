@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public GameObject wonGameScreen;
     public GameObject feedingTimerObject;
     public TextMeshProUGUI feedingTimerText;
+    public Animator HPAnimator;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateLives()
     {
+        PlayLosingHPAnimation();
         livesValue.text = "x" + GameController.Instance.lives;
     }
 
@@ -63,5 +65,10 @@ public class UIManager : MonoBehaviour
     public void UnFreezeTime()
     {
         Time.timeScale = 1f;
+    }
+
+    public void PlayLosingHPAnimation()
+    {
+        HPAnimator.SetTrigger("LosingHP");
     }
 }
