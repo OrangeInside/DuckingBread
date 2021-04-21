@@ -50,4 +50,12 @@ public class DucksManager : MonoBehaviour
             GameController.Instance.GameWon();
         }
     }
+
+    public void ToggleHungryMeters(bool toggle)
+    {
+        foreach (DuckBrain duck in ducksInLake)
+        {
+            duck.hungryHolder.SetActive(toggle);
+        }
+    }
 }

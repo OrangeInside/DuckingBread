@@ -60,6 +60,8 @@ public class GameController : MonoBehaviour
             if (currentFeedingTime < 0)
             {
                 feeding = false;
+                DucksManager.Instance.ToggleHungryMeters(false);
+
                 StartBreadSpawner();
                 UIManager.Instance.ToggleTimer(false);
             }
@@ -92,6 +94,7 @@ public class GameController : MonoBehaviour
         UIManager.Instance.UpdateUI();
         feeding = true;
         currentFeedingTime = feedingTime;
+        DucksManager.Instance.ToggleHungryMeters(true);
         UIManager.Instance.ToggleTimer(true);
 
     }

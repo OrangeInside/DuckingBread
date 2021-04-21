@@ -8,6 +8,7 @@ public class DuckBrain : MonoBehaviour
     [SerializeField] private float distanceToStartEatingBread = 0.5f;
     [SerializeField] private float timeToEat = 1.0f;
     [SerializeField] private GameObject eatingBarObject;
+    public GameObject hungryHolder;
     [SerializeField] private Image eatingBar;
 
     private DuckMovement duckMovement = null;
