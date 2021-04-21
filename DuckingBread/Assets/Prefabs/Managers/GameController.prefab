@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6315715842246413657}
   - component: {fileID: 6315715842246413658}
+  - component: {fileID: 6315715843298718265}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -45,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   ducks: []
+  audio: {fileID: 6315715843298718265}
   timeToGetMaxSeed: 30
   maxSeedLevel: 100
   seedPerSecond: 0.7
@@ -52,3 +54,23 @@ MonoBehaviour:
   feedingTime: 30
   breadSpawner: {fileID: 0}
   currentFeedingTime: 0
+--- !u!114 &6315715843298718265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6315715842246413659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6df7ea0aac73e4ca468258a4480fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Ambient
+    clip: {fileID: 8300000, guid: d0a834f6eee192243b996f1b7d24a408, type: 3}
+    volume: 0.178
+    pitch: 0.612
+    randomVolume: 0.046
+    randomPitch: 0.066
+    loop: 1
