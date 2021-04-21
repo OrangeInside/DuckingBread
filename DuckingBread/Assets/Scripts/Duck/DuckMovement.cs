@@ -6,6 +6,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class DuckMovement : MonoBehaviour
 {
+    [Header("References:")]
+    public GameObject waterSurface = null;
     [Header("Movement parameters:")]
     [SerializeField] private Vector2 minXZdestinationPoint;
     [SerializeField] private Vector2 maxXZdestinationPoint;
@@ -13,13 +15,14 @@ public class DuckMovement : MonoBehaviour
     [SerializeField] private float minDistanceBetweenNextPoint = 10.0f;
     [SerializeField] private float brakeDistance = 2.0f;
     [SerializeField] private float maxTimeToReachDestination = 10.0f;
+    [SerializeField] private float dashCenterDirectionOffset = 5.0f;
     [Space(10)]
     [SerializeField] private float minSpeed = 0.8f;
     [SerializeField] private float maxSpeed = 1.1f;
     [SerializeField] private float acceleration = 3.0f;
     [SerializeField] private float splashAcceleration = 9.0f;
-    [SerializeField] private float minIdleStateTime = 0.25f;
-    [SerializeField] private float maxIdleStateTime = 0.5f;
+    [SerializeField] private float dashAcceleration = 27.0f;
+    [SerializeField] private float dashDuration = 3.0f;
 
     private Vector3 destinationPoint = Vector3.zero;
     private NavMeshAgent navMeshAgent = null;
@@ -44,7 +47,22 @@ public class DuckMovement : MonoBehaviour
 
     private void Update()
     {
-        if (customPathForced)
+        if (dashForced)
+        {
+            dashCurrentTime += Time.deltaTime;
+
+            navMeshAgent.speed = speed * 9.0f;
+            navMeshAgent.acceleration = dashAcceleration;
+            navMeshAgent.SetDestination(this.transform.position + dashDirection);
+
+            if (dashCurrentTime >= dashDuration)
+            {
+                dashForced = false;
+                ResetDash();
+                ResetMovement();
+            }
+        }
+        else if (customPathForced)
         {
             customPathCurrentTime += Time.deltaTime;
 
@@ -68,19 +86,32 @@ public class DuckMovement : MonoBehaviour
                 return;
             }
 
-            currentTimeToReachDestination += Time.deltaTime;
+            /*currentTimeToReachDestination += Time.deltaTime;
 
             if (currentTimeToReachDestination > maxTimeToReachDestination)
             {
                 destinationPoint = this.transform.position;
-                SetDestinationPoint();
-            }
+                //SetDestinationPoint();
+                ForceDash();
+            }*/
 
             float distanceToDestPoint = Vector3.Distance(destinationPoint, this.transform.position);
 
             if (distanceToDestPoint < minDistanceToReachPoint)
             {
                 SetDestinationPoint();
+            }
+        }
+
+        if (!dashForced)
+        {
+            currentTimeToReachDestination += Time.deltaTime;
+
+            if (currentTimeToReachDestination > maxTimeToReachDestination)
+            {
+                destinationPoint = this.transform.position;
+                //SetDestinationPoint();
+                ForceDash();
             }
         }
     }
@@ -131,6 +162,9 @@ public class DuckMovement : MonoBehaviour
 
     public void ForcePathChange(Vector3 direction, float time)
     {
+        if (dashForced)
+            return;
+
         EnableMovement();
         brain?.InterruptEating();
 
@@ -171,6 +205,35 @@ public class DuckMovement : MonoBehaviour
     public void EnableMovement()
     {
         navMeshAgent.isStopped = false;
+    }
+
+    private bool dashForced = false;
+    private float dashCurrentTime = 0.0f;
+    private Vector3 dashDirection = Vector3.zero;
+
+    private void ForceDash()
+    {
+        dashForced = true;
+        customPathForced = false;
+
+        EnableMovement();
+
+        dashDirection = (waterSurface.transform.position + new Vector3(Random.Range(-dashCenterDirectionOffset, dashCenterDirectionOffset), 0.0f, Random.Range(-dashCenterDirectionOffset, dashCenterDirectionOffset)) - this.transform.position);
+        dashDirection.Normalize();
+
+        dashCurrentTime = 0.0f;
+
+        navMeshAgent.SetDestination(this.transform.position + dashDirection);
+
+        GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+    }
+
+    private void ResetDash()
+    {
+        currentTimeToReachDestination = 0.0f;
+        GetComponentInChildren<MeshRenderer>().material.color = Color.white;
+
+        ResetMovement();
     }
 }
 
