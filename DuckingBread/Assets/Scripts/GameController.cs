@@ -13,8 +13,10 @@ public class GameController : MonoBehaviour
     public float seedPerSecond = 0.5f;
     public float seedLevel = 0f;
     public float feedingTime = 30;
-
+    public int minimumSeeds;
+    public int maximumSeeds;
     public SpawnObject breadSpawner;
+    public SpawnObject seedSpawner;
     public float currentFeedingTime = 0;
     private bool feeding = false;
 
@@ -94,6 +96,7 @@ public class GameController : MonoBehaviour
         UIManager.Instance.UpdateUI();
         feeding = true;
         currentFeedingTime = feedingTime;
+        seedSpawner.SpawnOnCommand(Random.Range(minimumSeeds, maximumSeeds));
         DucksManager.Instance.ToggleHungryMeters(true);
         UIManager.Instance.ToggleTimer(true);
 

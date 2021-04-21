@@ -46,13 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   ducks: []
-  audio: {fileID: 6315715843298718265}
-  timeToGetMaxSeed: 30
+  timeToGetMaxSeed: 5
   maxSeedLevel: 100
   seedPerSecond: 0.7
   seedLevel: 0
   feedingTime: 30
+  minimumSeeds: 4
+  maximumSeeds: 8
   breadSpawner: {fileID: 0}
+  seedSpawner: {fileID: 0}
   currentFeedingTime: 0
 --- !u!114 &6315715843298718265
 MonoBehaviour:

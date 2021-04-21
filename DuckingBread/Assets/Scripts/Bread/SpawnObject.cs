@@ -63,17 +63,26 @@ public class SpawnObject : MonoBehaviour
 		}
 		
 	}
+
 	/// <summary>
 	/// Spawns number of objects at a random location on a plane
 	/// </summary>
-	public void SpawnOnCommand()
+	public void SpawnOnCommand(int objectsToSpawn)
     {
-		for(int i = 0; i < amountOfSpawns; i++)
-        {
-			ObjectSpawn();
-		}
+		IEnumerator spawningObjects = Spawning(objectsToSpawn);
+		StartCoroutine(spawningObjects);
 	
 	}
+
+	IEnumerator Spawning(int objectsToSpawn)
+    {
+		while(objectsToSpawn > 0)
+        {
+			ObjectSpawn();
+			objectsToSpawn--;
+			yield return new WaitForSeconds(Random.Range(1, 3));
+		}
+    }
 	/// <summary>
 	/// Spawns an object at a random location on a plane
 	/// </summary>
