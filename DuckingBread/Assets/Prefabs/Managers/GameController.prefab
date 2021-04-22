@@ -51,8 +51,8 @@ MonoBehaviour:
   seedPerSecond: 0.7
   seedLevel: 0
   feedingTime: 30
-  minimumSeeds: 4
-  maximumSeeds: 8
+  minimumSeeds: 5
+  maximumSeeds: 5
   breadSpawner: {fileID: 0}
   seedSpawner: {fileID: 0}
   currentFeedingTime: 0
