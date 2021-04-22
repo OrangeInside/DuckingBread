@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
     public float currentFeedingTime = 0;
     private bool feeding = false;
 
+    
+
     private void Awake()
     {
         GameController.Instance = this;
@@ -30,9 +32,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         ducks = GameObject.FindGameObjectsWithTag("Duck");
-       
     }
 
     // Update is called once per frame
@@ -61,11 +61,7 @@ public class GameController : MonoBehaviour
             UIManager.Instance.UpdateTimer();
             if (currentFeedingTime < 0)
             {
-                feeding = false;
-                DucksManager.Instance.ToggleHungryMeters(false);
-
-                StartBreadSpawner();
-                UIManager.Instance.ToggleTimer(false);
+                TurnOffFeedingTime();
             }
 
         }
@@ -81,6 +77,19 @@ public class GameController : MonoBehaviour
             }
         }
     }
+    public void TurnOffFeedingTime()
+    {
+        feeding = false;
+        DucksManager.Instance.ToggleHungryMeters(false);
+        StartBreadSpawner();
+        UIManager.Instance.ToggleTimer(false);
+    }
+
+    public void SeedEaten(GameObject seed)
+    {
+        seedSpawner.DeleteFromList(seed);
+    }
+
     public void StopBreadSpawner()
     {
         breadSpawner.onCommand = true;

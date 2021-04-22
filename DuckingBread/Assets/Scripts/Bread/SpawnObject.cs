@@ -16,12 +16,14 @@ public class SpawnObject : MonoBehaviour
 
 	public int amountOfSpawns;
 
+	private List<GameObject> spawnedObjects;
+
 	// spawn control
 	public bool onCommand = false;
 	const float MinSpawnDelay = 1;
 	const float MaxSpawnDelay = 5;
 	Timer spawnTimer;
-
+	public bool spawnedAll = false;
 	// spawn location support
 	float randomX;
 	float randomY;
@@ -64,11 +66,20 @@ public class SpawnObject : MonoBehaviour
 		
 	}
 
+	public void DeleteFromList(GameObject givenObject)
+    {
+		spawnedObjects.Remove(givenObject);
+		if (spawnedAll && spawnedObjects.Count == 0)
+			GameController.Instance.TurnOffFeedingTime();
+    }
+
 	/// <summary>
 	/// Spawns number of objects at a random location on a plane
 	/// </summary>
 	public void SpawnOnCommand(int objectsToSpawn)
     {
+		spawnedObjects = new List<GameObject>();
+		spawnedAll = false;
 		IEnumerator spawningObjects = Spawning(objectsToSpawn);
 		StartCoroutine(spawningObjects);
 	
@@ -78,20 +89,21 @@ public class SpawnObject : MonoBehaviour
     {
 		while(objectsToSpawn > 0)
         {
-			ObjectSpawn();
+			spawnedObjects.Add(ObjectSpawn());
 			objectsToSpawn--;
-			yield return new WaitForSeconds(Random.Range(1, 3));
+			yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
 		}
+		spawnedAll = true;
     }
 	/// <summary>
 	/// Spawns an object at a random location on a plane
 	/// </summary>
-	public void ObjectSpawn()
+	public GameObject ObjectSpawn()
 	{
 		// generate random location and create new object
 		Vector3 randomPosition = GetARandomPos(plane);
                                                                   
-        Instantiate<GameObject>(spawnObject, randomPosition, Quaternion.identity);   
+        return Instantiate<GameObject>(spawnObject, randomPosition, Quaternion.identity);   
 	
 	}
 

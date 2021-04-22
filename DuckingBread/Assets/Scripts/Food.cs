@@ -19,6 +19,7 @@ public class Food : MonoBehaviour
         if (type == FoodType.Good)
         {
             consumer.DuckHunger?.IncreaseHungryPoints();
+            GameController.Instance.SeedEaten(this.gameObject);
         }
         else if (type == FoodType.Bad)
         {
