@@ -24,6 +24,7 @@ public class DuckMovement : MonoBehaviour
     [SerializeField] private float dashAcceleration = 27.0f;
     [SerializeField] private float dashDuration = 3.0f;
 
+    private Animator animator = null;
     private Vector3 destinationPoint = Vector3.zero;
     private NavMeshAgent navMeshAgent = null;
     private float speed = 3.0f;
@@ -36,6 +37,7 @@ public class DuckMovement : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         brain = GetComponent<DuckBrain>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -85,15 +87,6 @@ public class DuckMovement : MonoBehaviour
             {
                 return;
             }
-
-            /*currentTimeToReachDestination += Time.deltaTime;
-
-            if (currentTimeToReachDestination > maxTimeToReachDestination)
-            {
-                destinationPoint = this.transform.position;
-                //SetDestinationPoint();
-                ForceDash();
-            }*/
 
             float distanceToDestPoint = Vector3.Distance(destinationPoint, this.transform.position);
 
@@ -218,6 +211,8 @@ public class DuckMovement : MonoBehaviour
 
         EnableMovement();
 
+        animator.SetTrigger("dashStartTrigger");
+
         dashDirection = (waterSurface.transform.position + new Vector3(Random.Range(-dashCenterDirectionOffset, dashCenterDirectionOffset), 0.0f, Random.Range(-dashCenterDirectionOffset, dashCenterDirectionOffset)) - this.transform.position);
         dashDirection.Normalize();
 
@@ -230,6 +225,8 @@ public class DuckMovement : MonoBehaviour
 
     private void ResetDash()
     {
+        animator?.SetTrigger("dashStopTrigger");
+
         currentTimeToReachDestination = 0.0f;
         GetComponentInChildren<MeshRenderer>().material.color = Color.white;
 
