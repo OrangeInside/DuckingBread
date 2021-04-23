@@ -10,14 +10,17 @@ public class DuckBrain : MonoBehaviour
     [SerializeField] private float distanceToStartEatingBread = 0.5f;
     [SerializeField] private float timeToEat = 1.0f;
     [SerializeField] private GameObject eatingBarObject;
+    [SerializeField] private float quackChance;
     public GameObject hungryHolder;
     [SerializeField] private Image eatingBar;
+    public AudioClip[] quackSounds;
 
     private DuckMovement duckMovement = null;
     private DuckHunger duckHunger = null;
 
     private List<Food> foodInRange = new List<Food>();
     private Food foodTarget = null;
+    private AudioSource audioSource;
 
     private void Start()
     {
@@ -25,6 +28,7 @@ public class DuckBrain : MonoBehaviour
 
         duckMovement = GetComponent<DuckMovement>();
         duckHunger = GetComponent<DuckHunger>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private List<Splash> usedSplashes = new List<Splash>();
@@ -38,8 +42,18 @@ public class DuckBrain : MonoBehaviour
             if (!usedSplashes.Contains(splash))
             {
                 usedSplashes.Add(splash);
+                PlayRandomQuack();
                 duckMovement.ForcePathChange(this.transform.position - other.transform.position, 1.0f);
             }
+        }
+    }
+
+    private void PlayRandomQuack()
+    {
+        if (Random.Range(0, 100) <= quackChance)
+        {
+            audioSource.clip = quackSounds[Random.Range(0, quackSounds.Length)];
+            audioSource.Play();
         }
     }
 
