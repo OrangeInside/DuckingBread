@@ -10,6 +10,8 @@ public enum FoodType
 
 public class Food : MonoBehaviour
 {
+    public GameObject fracturedFood = null;
+
     [SerializeField] private FoodType type;
 
     public FoodType Type { get => type; }
@@ -31,6 +33,12 @@ public class Food : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (fracturedFood)
+        {
+            GameObject destroyedFood = Instantiate(fracturedFood, this.transform.position, fracturedFood.transform.rotation);
+            Destroy(destroyedFood, 1.1f);
+        }
+
         DucksManager.Instance?.RemoveFoodReference(this);
     }
 }
