@@ -45,6 +45,8 @@ public class DuckMovement : MonoBehaviour
         SetDestinationPoint();
 
         navMeshAgent.acceleration = acceleration;
+
+        animator?.SetBool("isMoving", !navMeshAgent.isStopped);
     }
 
     private void Update()
@@ -192,11 +194,13 @@ public class DuckMovement : MonoBehaviour
 
     public void DisableMovement()
     {
+        animator?.SetBool("isMoving", false);
         navMeshAgent.isStopped = true;
     }
 
     public void EnableMovement()
     {
+        animator?.SetBool("isMoving", true);
         navMeshAgent.isStopped = false;
     }
 
