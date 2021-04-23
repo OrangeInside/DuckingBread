@@ -119,9 +119,9 @@ public class SpawnObject : MonoBehaviour
 		float minX = plane.transform.position.x - plane.transform.localScale.x * bounds.size.x * 0.5f;
 		float minZ = plane.transform.position.z - plane.transform.localScale.z * bounds.size.z * 0.5f;
 
-		Vector3 newVec = new Vector3(Random.Range (minX, -minX),
+		Vector3 newVec = new Vector3(Random.Range (minX+1, (-minX)-1),
 									 plane.transform.position.y,
-									 Random.Range (minZ, -minZ));
+									 Random.Range (minZ+1, -minZ-1));
 		return newVec;
 	}
 
