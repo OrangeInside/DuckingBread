@@ -26,7 +26,7 @@ public class DuckHunger : MonoBehaviour
             }
         }
 
-        hungryPoints[currentHungryPoints - 1].color = new Color(1, 1, 1, 1);
+        hungryPoints[currentHungryPoints - 1].color = new Color(1f, 155/255f, 0, 1);
 
         if (currentHungryPoints > requiredHungryPoints)
         {
