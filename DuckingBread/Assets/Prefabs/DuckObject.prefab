@@ -528,6 +528,9 @@ MonoBehaviour:
   brakeDistance: 5
   maxTimeToReachDestination: 15
   dashCenterDirectionOffset: 5
+  dashObstacleLayers:
+    serializedVersion: 2
+    m_Bits: 256
   minSpeed: 7
   maxSpeed: 9
   acceleration: 8

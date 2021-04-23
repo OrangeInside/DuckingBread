@@ -16,13 +16,13 @@ public class DuckMovement : MonoBehaviour
     [SerializeField] private float brakeDistance = 2.0f;
     [SerializeField] private float maxTimeToReachDestination = 10.0f;
     [SerializeField] private float dashCenterDirectionOffset = 5.0f;
+    [SerializeField] private LayerMask dashObstacleLayers;
     [Space(10)]
     [SerializeField] private float minSpeed = 0.8f;
     [SerializeField] private float maxSpeed = 1.1f;
     [SerializeField] private float acceleration = 3.0f;
     [SerializeField] private float splashAcceleration = 9.0f;
     [SerializeField] private float dashAcceleration = 27.0f;
-    [SerializeField] private float dashDuration = 3.0f;
 
     private Animator animator = null;
     private Vector3 destinationPoint = Vector3.zero;
@@ -51,13 +51,10 @@ public class DuckMovement : MonoBehaviour
     {
         if (dashForced)
         {
-            dashCurrentTime += Time.deltaTime;
-
-            navMeshAgent.speed = speed * 9.0f;
+            navMeshAgent.speed = speed * 4.5f;
             navMeshAgent.acceleration = dashAcceleration;
-            navMeshAgent.SetDestination(this.transform.position + dashDirection);
 
-            if (dashCurrentTime >= dashDuration)
+            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
             {
                 dashForced = false;
                 ResetDash();
@@ -180,7 +177,9 @@ public class DuckMovement : MonoBehaviour
     {
         hasFoodAsDestinationPoint = true;
         foodTarget = food;
-        navMeshAgent.SetDestination(foodTarget.transform.position);
+
+        if (!dashForced)
+            navMeshAgent.SetDestination(foodTarget.transform.position);
     }
 
     public void StopFollowingToFood()
@@ -201,7 +200,6 @@ public class DuckMovement : MonoBehaviour
     }
 
     private bool dashForced = false;
-    private float dashCurrentTime = 0.0f;
     private Vector3 dashDirection = Vector3.zero;
 
     private void ForceDash()
@@ -215,12 +213,9 @@ public class DuckMovement : MonoBehaviour
 
         dashDirection = (waterSurface.transform.position + new Vector3(Random.Range(-dashCenterDirectionOffset, dashCenterDirectionOffset), 0.0f, Random.Range(-dashCenterDirectionOffset, dashCenterDirectionOffset)) - this.transform.position);
         dashDirection.Normalize();
+        dashDirection.y = 0.0f;
 
-        dashCurrentTime = 0.0f;
-
-        navMeshAgent.SetDestination(this.transform.position + dashDirection);
-
-        GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+        navMeshAgent.SetDestination(dashDirection * 4.0f);
     }
 
     private void ResetDash()
@@ -228,7 +223,6 @@ public class DuckMovement : MonoBehaviour
         animator?.SetTrigger("dashStopTrigger");
 
         currentTimeToReachDestination = 0.0f;
-        GetComponentInChildren<MeshRenderer>().material.color = Color.white;
 
         ResetMovement();
     }

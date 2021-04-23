@@ -251,7 +251,8 @@ GameObject:
   - component: {fileID: 178632479}
   - component: {fileID: 178632478}
   - component: {fileID: 178632477}
-  m_Layer: 0
+  - component: {fileID: 178632481}
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +270,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 5, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &178632478
 MeshRenderer:
@@ -332,6 +333,22 @@ Transform:
   m_Father: {fileID: 1991855119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &178632481
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178632476}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!114 &190088672 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8009602922680742131, guid: 31300175493e3ea498f84b94e57988a8,
@@ -371,20 +388,25 @@ PrefabInstance:
       propertyPath: waterSurface
       value: 
       objectReference: {fileID: 46621886}
+    - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: maxTimeToReachDestination
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58.45633
+      value: -16.7
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4051752
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.3062797
+      value: -0.69999933
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
@@ -515,20 +537,25 @@ PrefabInstance:
       propertyPath: waterSurface
       value: 
       objectReference: {fileID: 46621886}
+    - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: maxTimeToReachDestination
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -55.056328
+      value: -13.299999
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4051752
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.40628
+      value: 10.400002
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
@@ -668,7 +695,8 @@ GameObject:
   - component: {fileID: 519590286}
   - component: {fileID: 519590285}
   - component: {fileID: 519590284}
-  m_Layer: 0
+  - component: {fileID: 519590287}
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +728,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 5, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &519590285
 MeshRenderer:
@@ -749,6 +777,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519590282}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!208 &519590287
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519590282}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &575071335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,20 +820,25 @@ PrefabInstance:
       propertyPath: waterSurface
       value: 
       objectReference: {fileID: 46621886}
+    - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: maxTimeToReachDestination
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -62.836327
+      value: -21.079998
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4051752
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.64372
+      value: -13.65
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
@@ -1018,20 +1067,25 @@ PrefabInstance:
       propertyPath: waterSurface
       value: 
       objectReference: {fileID: 46621886}
+    - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: maxTimeToReachDestination
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.75633
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4051752
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.006279
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
@@ -1159,7 +1213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795595505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.556328, y: 0.5948248, z: -1.3062797}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 823724987}
@@ -1189,7 +1243,8 @@ GameObject:
   - component: {fileID: 828051150}
   - component: {fileID: 828051149}
   - component: {fileID: 828051148}
-  m_Layer: 0
+  - component: {fileID: 828051151}
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1276,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 5, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &828051149
 MeshRenderer:
@@ -1270,6 +1325,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828051146}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!208 &828051151
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828051146}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,20 +1457,25 @@ PrefabInstance:
       propertyPath: waterSurface
       value: 
       objectReference: {fileID: 46621886}
+    - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: maxTimeToReachDestination
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.156328
+      value: 16.6
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4051752
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.30628
+      value: 3.3000011
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
@@ -1611,7 +1687,8 @@ GameObject:
   - component: {fileID: 1399320805}
   - component: {fileID: 1399320804}
   - component: {fileID: 1399320803}
-  m_Layer: 0
+  - component: {fileID: 1399320806}
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1643,7 +1720,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 5, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1399320804
 MeshRenderer:
@@ -1692,6 +1769,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399320801}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!208 &1399320806
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399320801}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!114 &1450176633 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8251457269272213870, guid: 0e9166a4502aeff4689e1adfcb2fc7b4,
@@ -2059,17 +2152,17 @@ PrefabInstance:
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.556328
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4051752
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3062797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
