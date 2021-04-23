@@ -5268,6 +5268,7 @@ MonoBehaviour:
   quackSounds:
   - {fileID: 8300000, guid: a0ec42df1745cd549897530f6eb06fd8, type: 3}
   - {fileID: 8300000, guid: 6a0c59a9a6f032247af13e0fdab2cc36, type: 3}
+  quackChance: 15
 --- !u!114 &246598298164919068
 MonoBehaviour:
   m_ObjectHideFlags: 0

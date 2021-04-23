@@ -13,6 +13,7 @@ public class DuckBrain : MonoBehaviour
     public GameObject hungryHolder;
     [SerializeField] private Image eatingBar;
     [SerializeField] private AudioClip [] quackSounds;
+    [SerializeField] private float quackChance;
     private DuckMovement duckMovement = null;
     private DuckHunger duckHunger = null;
 
@@ -87,8 +88,11 @@ public class DuckBrain : MonoBehaviour
 
     private void PlayRandomQuack()
     {
-        audioSource.clip = quackSounds[Random.Range(0, quackSounds.Length)];
-        audioSource.Play();
+        if(Random.Range(0,100) <= quackChance)
+        {
+            audioSource.clip = quackSounds[Random.Range(0, quackSounds.Length)];
+            audioSource.Play();
+        }
     }
 
     public void RemoveSplashReference(Splash splash)
