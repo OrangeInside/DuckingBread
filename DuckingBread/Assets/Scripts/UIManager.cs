@@ -14,7 +14,8 @@ public class UIManager : MonoBehaviour
     public GameObject wonGameScreen;
     public GameObject feedingTimerObject;
     public TextMeshProUGUI feedingTimerText;
-    public Animator HPAnimator;
+    public Animator HPAnimatorBump;
+    public Animator HPAnimatorLoss;
 
     private void Awake()
     {
@@ -69,6 +70,7 @@ public class UIManager : MonoBehaviour
 
     public void PlayLosingHPAnimation()
     {
-        HPAnimator.SetTrigger("LosingHP");
+        HPAnimatorLoss.SetTrigger("LosingHP");
+        HPAnimatorBump.SetTrigger("LosingHPBump");
     }
 }
