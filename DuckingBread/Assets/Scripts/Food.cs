@@ -21,7 +21,7 @@ public class Food : MonoBehaviour
         if (type == FoodType.Good)
         {
             consumer.DuckHunger?.IncreaseHungryPoints();
-            GameController.Instance.SeedEaten(this.gameObject);
+
         }
         else if (type == FoodType.Bad)
         {
@@ -37,6 +37,11 @@ public class Food : MonoBehaviour
         {
             GameObject destroyedFood = Instantiate(fracturedFood, this.transform.position, fracturedFood.transform.rotation);
             Destroy(destroyedFood, 1.1f);
+        }
+
+        if(type == FoodType.Good)
+        {
+            GameController.Instance.SeedEaten(this.gameObject);
         }
 
         DucksManager.Instance?.RemoveFoodReference(this);

@@ -136,12 +136,14 @@ MonoBehaviour:
     pitch: 0.612
     randomVolume: 0.031
     randomPitch: 0.031
+    loop: 0
   - name: Splash2
     clip: {fileID: 8300000, guid: fc2aeeb0e7275a84ab8cff55ef248c40, type: 3}
     volume: 0.245
     pitch: 0.637
     randomVolume: 0.027
     randomPitch: 0.019
+    loop: 0
 --- !u!114 &1220648778780785513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5100d07729ea114db90d002403378e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyLifespanSeconds: 30
+  EnemyLifespanSeconds: 10
   splash: {fileID: 8388583994455767119}
 --- !u!54 &2283897967789007945
 Rigidbody:
@@ -197,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961aa5b1e1ebd7e40a7020e0298c30a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fracturedFood: {fileID: 0}
   type: 0
 --- !u!1001 &3078754217360328132
 PrefabInstance:

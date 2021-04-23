@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     public SpawnObject breadSpawner;
     public SpawnObject seedSpawner;
     public float currentFeedingTime = 0;
-    private bool feeding = false;
+    public bool feeding = false;
 
     
 
@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
             {
                 seedLevel = maxSeedLevel;
 
-                FindAndDestroyAllBreads();
+                //FindAndDestroyAllBreads();
                 StopBreadSpawner();
                 UIManager.Instance.ToggleSeedButton(true);
             }    

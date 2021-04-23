@@ -69,8 +69,10 @@ public class SpawnObject : MonoBehaviour
 	public void DeleteFromList(GameObject givenObject)
     {
 		spawnedObjects.Remove(givenObject);
-		if (spawnedAll && spawnedObjects.Count == 0)
-			GameController.Instance.TurnOffFeedingTime();
+		if (GameController.Instance.feeding && spawnedObjects.Count < 2)
+			SpawnNextObject();
+		//if (spawnedAll && spawnedObjects.Count == 0)
+		//	GameController.Instance.TurnOffFeedingTime();
     }
 
 	/// <summary>
@@ -93,8 +95,14 @@ public class SpawnObject : MonoBehaviour
 			objectsToSpawn--;
 			yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
 		}
-		spawnedAll = true;
+		//spawnedAll = true;
     }
+
+	public void SpawnNextObject()
+    {
+		spawnedObjects.Add(ObjectSpawn());
+
+	}
 	/// <summary>
 	/// Spawns an object at a random location on a plane
 	/// </summary>
