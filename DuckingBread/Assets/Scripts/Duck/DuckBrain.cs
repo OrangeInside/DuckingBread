@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DuckBrain : MonoBehaviour
 {
+    public ParticleSystem eatingParticlesPH = null;
+
     [SerializeField] private float distanceToStartEatingBread = 0.5f;
     [SerializeField] private float timeToEat = 1.0f;
     [SerializeField] private GameObject eatingBarObject;
@@ -57,6 +59,8 @@ public class DuckBrain : MonoBehaviour
                 eatingBar.fillAmount = currentEatingTime / timeToEat;
                 if (currentEatingTime >= timeToEat)
                 {
+                    eatingParticlesPH?.Stop();
+
                     isEating = false;
 
                     foodTarget.ConsumeFood(this);
@@ -72,6 +76,8 @@ public class DuckBrain : MonoBehaviour
                 eatingBarObject.SetActive(true);
                 currentEatingTime = 0.0f;
                 duckMovement.DisableMovement();
+
+                eatingParticlesPH?.Play();
             }
         }
     }
@@ -156,6 +162,8 @@ public class DuckBrain : MonoBehaviour
         {
             isEating = false;
             eatingBarObject.SetActive(false);
+
+            eatingParticlesPH?.Stop();
         }
     }
 }
