@@ -147,6 +147,8 @@ public class DuckBrain : MonoBehaviour
                 isEating = false;
                 eatingBarObject.SetActive(false);
                 duckMovement.EnableMovement();
+
+                eatingParticlesPH?.Stop();
             }
         }
 
