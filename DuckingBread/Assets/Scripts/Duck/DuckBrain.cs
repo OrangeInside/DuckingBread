@@ -70,7 +70,7 @@ public class DuckBrain : MonoBehaviour
                     eatingBarObject.SetActive(false);
                 }
             }    
-            else if (Vector3.Distance(foodTarget.transform.position, this.transform.position) < distanceToStartEatingBread && !isEating && !duckMovement.CustomPathForced)
+            else if (Vector3.Distance(foodTarget.transform.position, this.transform.position) < distanceToStartEatingBread && !isEating && !duckMovement.CustomPathForced && !duckMovement.DashForced)
             {
                 isEating = true;
                 eatingBarObject.SetActive(true);

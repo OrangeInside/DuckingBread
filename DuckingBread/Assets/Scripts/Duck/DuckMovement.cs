@@ -172,6 +172,7 @@ public class DuckMovement : MonoBehaviour
     private bool hasFoodAsDestinationPoint = false;
 
     public bool CustomPathForced { get => customPathForced; }
+    public bool DashForced { get => dashForced; }
 
     public void SetFoodAsDestinationPoint(GameObject food)
     {
