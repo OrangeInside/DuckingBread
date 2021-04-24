@@ -60,7 +60,7 @@ public class DuckBrain : MonoBehaviour
 
     public void PlayDiveSound()
     {
-        audioSource.clip = diveSounds[Random.Range(0, quackSounds.Length)];
+        audioSource.clip = diveSounds[Random.Range(0, diveSounds.Length)];
         audioSource.Play();
     }
 
