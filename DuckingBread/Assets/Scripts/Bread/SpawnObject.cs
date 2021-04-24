@@ -24,12 +24,12 @@ public class SpawnObject : MonoBehaviour
 	const float MaxSpawnDelay = 5;
 	Timer spawnTimer;
 	public bool spawnedAll = false;
-
+	Vector3 checker;
 	#region Methods
-    /// <summary>
-    /// Use this for initialization
-    /// </summary>
-    void Start()
+	/// <summary>
+	/// Use this for initialization
+	/// </summary>
+	void Start()
     {
 		plane = GameObject.FindWithTag("Walkable");
 
@@ -123,10 +123,11 @@ public class SpawnObject : MonoBehaviour
 		{
 
 			newVec = new Vector3(Random.Range(minX + 1, (-minX) - 1),
-									plane.transform.position.y+0.07f,
+									plane.transform.position.y,
 									Random.Range(minZ + 1, -minZ - 1));
-			
-		} while (!Checkforfreespace(newVec));
+			checker = newVec;
+			checker.y += 2f;
+		} while (!Checkforfreespace(checker));
 		
 		
 
