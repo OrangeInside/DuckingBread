@@ -24,10 +24,6 @@ public class SpawnObject : MonoBehaviour
 	const float MaxSpawnDelay = 5;
 	Timer spawnTimer;
 	public bool spawnedAll = false;
-	// spawn location support
-	float randomX;
-	float randomY;
-	float randomZ;
 
 	#region Methods
     /// <summary>
@@ -36,11 +32,6 @@ public class SpawnObject : MonoBehaviour
     void Start()
     {
 		plane = GameObject.FindWithTag("Walkable");
-
-		// save spawn boundaries for efficiency
-		float randomX = Random.Range (plane.transform.position.x - plane.transform.localScale.x / 2 + plane.transform.localScale.x / 9, plane.transform.position.x + plane.transform.localScale.x / 2 - plane.transform.localScale.x / 9);
-		float randomY = Random.Range (plane.transform.position.y - plane.transform.localScale.y / 2, plane.transform.position.y + plane.transform.localScale.y / 2);
-		float randomZ = Random.Range (plane.transform.position.y - plane.transform.localScale.z / 2 + plane.transform.localScale.z / 9, plane.transform.position.y + plane.transform.localScale.z / 2- plane.transform.localScale.z / 9);
 
 		// create and start timer
 		spawnTimer = gameObject.AddComponent<Timer>();
@@ -124,7 +115,7 @@ public class SpawnObject : MonoBehaviour
 		Mesh planeMesh = plane.GetComponent<MeshFilter>().mesh;
 		Bounds bounds = planeMesh.bounds;
 		Vector3 newVec;
-		Vector3 newVec2;
+		
 		float minX = plane.transform.position.x - plane.transform.localScale.x * bounds.size.x * 0.5f;
 		float minZ = plane.transform.position.z - plane.transform.localScale.z * bounds.size.z * 0.5f;
 
@@ -132,12 +123,10 @@ public class SpawnObject : MonoBehaviour
 		{
 
 			newVec = new Vector3(Random.Range(minX + 1, (-minX) - 1),
-									plane.transform.position.y,
+									plane.transform.position.y+0.07f,
 									Random.Range(minZ + 1, -minZ - 1));
-			newVec2 = new Vector3(Random.Range(minX + 1, (-minX) - 1),
-										plane.transform.position.y + 2,
-										Random.Range(minZ + 1, -minZ - 1));
-		} while (!Checkforfreespace(newVec2));
+			
+		} while (!Checkforfreespace(newVec));
 		
 		
 
