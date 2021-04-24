@@ -119,7 +119,7 @@ public class DuckMovement : MonoBehaviour
         {
             destinationPoint = GetDestinationPoint();
 
-        } while (Vector3.Distance(previousDestinationPoint, destinationPoint) < minDistanceBetweenNextPoint);
+        } while (Vector3.Distance(previousDestinationPoint, destinationPoint) < minDistanceBetweenNextPoint || Physics.OverlapSphere(destinationPoint, 2.5f, dashObstacleLayers).Length != 0);
 
         if (navMeshAgent)
         {
