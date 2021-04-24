@@ -79,11 +79,11 @@ Material:
     - _ZWrite: 1
     - _isInnerAlphaBlendOrColor: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.4255645, b: 0.5660378, a: 0.5}
+    - _BaseColor: {r: 0, g: 0.58920234, b: 0.7830189, a: 0.5}
     - _BumpDirection: {r: 1, g: 0, b: -1, a: 1}
     - _BumpTiling: {r: 1, g: 0, b: -2, a: 3}
     - _Color: {r: 0.35292807, g: 0.6409762, b: 0.9716981, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Foam: {r: 0.1, g: 0, b: 0, a: 0}
     - _InvFadeParemeter: {r: 1, g: 0, b: 1, a: 1}
-    - _SpecColor: {r: 0, g: 0.4433962, b: 0.41030693, a: 1}
+    - _SpecColor: {r: 0, g: 0.5188679, b: 0.48224202, a: 1}
