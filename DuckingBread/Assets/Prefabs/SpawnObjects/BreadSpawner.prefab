@@ -46,6 +46,7 @@ MonoBehaviour:
   spawnObject: {fileID: 1267423346187418411, guid: c6a17b0d3a6ff354a8f2badc29e82529,
     type: 3}
   plane: {fileID: 0}
-  amountOfSpawns: 0
-  spawnedObjects: []
+  MinSpawnDelay: 1
+  MaxSpawnDelay: 5
   onCommand: 0
+  spawnedAll: 0

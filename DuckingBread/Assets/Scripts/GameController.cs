@@ -14,8 +14,8 @@ public class GameController : MonoBehaviour
     public float seedLevel = 0f;
     public float feedingTime = 30;
     public int seedsToSpawn;
-    public SpawnObject breadSpawner;
-    public SpawnObject seedSpawner;
+    public Spawner breadSpawner;
+    public Spawner seedSpawner;
     public float currentFeedingTime = 0;
     public bool feeding = false;
 

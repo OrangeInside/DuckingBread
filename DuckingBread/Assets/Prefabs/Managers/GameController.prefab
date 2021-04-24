@@ -50,11 +50,12 @@ MonoBehaviour:
   maxSeedLevel: 100
   seedPerSecond: 0.7
   seedLevel: 0
-  feedingTime: 30
-  seedsToSpawn: 3
+  feedingTime: 20
+  seedsToSpawn: 2
   breadSpawner: {fileID: 0}
   seedSpawner: {fileID: 0}
   currentFeedingTime: 0
+  feeding: 0
 --- !u!114 &6315715843298718265
 MonoBehaviour:
   m_ObjectHideFlags: 0
