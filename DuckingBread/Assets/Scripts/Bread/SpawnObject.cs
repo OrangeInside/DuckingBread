@@ -123,15 +123,50 @@ public class SpawnObject : MonoBehaviour
 
 		Mesh planeMesh = plane.GetComponent<MeshFilter>().mesh;
 		Bounds bounds = planeMesh.bounds;
-
+		Vector3 newVec;
+		Vector3 newVec2;
 		float minX = plane.transform.position.x - plane.transform.localScale.x * bounds.size.x * 0.5f;
 		float minZ = plane.transform.position.z - plane.transform.localScale.z * bounds.size.z * 0.5f;
 
-		Vector3 newVec = new Vector3(Random.Range (minX+1, (-minX)-1),
-									 plane.transform.position.y,
-									 Random.Range (minZ+1, -minZ-1));
+		do
+		{
+
+			newVec = new Vector3(Random.Range(minX + 1, (-minX) - 1),
+									plane.transform.position.y,
+									Random.Range(minZ + 1, -minZ - 1));
+			newVec2 = new Vector3(Random.Range(minX + 1, (-minX) - 1),
+										plane.transform.position.y + 2,
+										Random.Range(minZ + 1, -minZ - 1));
+		} while (!Checkforfreespace(newVec2));
+		
+		
+
+
 		return newVec;
 	}
+	public bool Checkforfreespace(Vector3 v)
+	{
+		float maxDistance =5f;
+		RaycastHit hit;
 
+		bool isHit =
+			Physics.BoxCast(v, spawnObject.transform.lossyScale , new Vector3(0,-1,0), out hit,
+			spawnObject.transform.rotation, maxDistance);
+		if (isHit)
+		{
+			Debug.Log("Trafiłem");
+			if (hit.transform.tag == "Food" || hit.transform.tag == "Ground" || hit.transform.tag == "Duck")
+			{
+				Debug.Log("to");
+				
+				return false;
+			}
+			else
+				return true;
+			
+		}
+		
+		return true;
+	}
 	#endregion
 }

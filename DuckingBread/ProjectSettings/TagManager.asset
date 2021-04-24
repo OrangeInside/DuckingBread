@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - Duck
   - Food
+  - Ground
   layers:
   - Default
   - TransparentFX
