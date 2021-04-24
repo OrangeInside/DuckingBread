@@ -22,5 +22,11 @@ public class LevelSelector : MonoBehaviour {
 	{
 		fader.FadeTo(levelName);
 	}
+	public void Menu()
+	{
+		//Toggle();
+		Time.timeScale = 1f;
+		fader.FadeTo("MainMenu");
+	}
 
 }
