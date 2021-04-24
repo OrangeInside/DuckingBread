@@ -14,6 +14,7 @@ public class DuckBrain : MonoBehaviour
     public GameObject hungryHolder;
     [SerializeField] private Image eatingBar;
     public AudioClip[] quackSounds;
+    public AudioClip[] diveSounds;
 
     private DuckMovement duckMovement = null;
     private DuckHunger duckHunger = null;
@@ -55,6 +56,12 @@ public class DuckBrain : MonoBehaviour
             audioSource.clip = quackSounds[Random.Range(0, quackSounds.Length)];
             audioSource.Play();
         }
+    }
+
+    public void PlayDiveSound()
+    {
+        audioSource.clip = diveSounds[Random.Range(0, quackSounds.Length)];
+        audioSource.Play();
     }
 
     private bool isEating = false;

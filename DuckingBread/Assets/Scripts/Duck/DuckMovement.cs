@@ -211,7 +211,7 @@ public class DuckMovement : MonoBehaviour
     {
         dashForced = true;
         customPathForced = false;
-
+        brain.PlayDiveSound();
         EnableMovement();
 
         animator.SetTrigger("dashStartTrigger");
