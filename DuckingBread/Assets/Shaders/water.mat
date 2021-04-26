@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_45FF2AB4:
-        m_Texture: {fileID: 2800000, guid: fcaa25c96d1173646b2f43a6998e27dc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 054716af0168d494cbe256496ace8ed7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_72DF7E3B:
@@ -29,10 +29,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2C2DF8BB: 1.06
+    - Vector1_2C2DF8BB: 0.5
     - Vector1_65A97A04: 2
-    - Vector1_A439119F: 1.28
-    - Vector1_BC9846D: 1
+    - Vector1_A439119F: 0.5
+    - Vector1_BC9846D: 0.141
     m_Colors:
-    - DeepWater: {r: 0, g: 0.7424358, b: 0.9622642, a: 0.8666667}
+    - DeepWater: {r: 0.39684942, g: 0.8263098, b: 0.9245283, a: 0.8666667}
     - Shalo: {r: 0, g: 0.54176605, b: 0.7924528, a: 0.7529412}
+    - Vector2_A8D96CF4: {r: 5, g: 2, b: 0, a: 0}
+    - Vector2_B9172400: {r: 2.5, g: 2.5, b: 0, a: 0}

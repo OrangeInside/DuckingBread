@@ -94,7 +94,7 @@ public class Spawner : MonoBehaviour
 		do
 		{
 			randomPosition = new Vector3(Random.Range(minX + 1, (-minX) - 1),
-									plane.transform.position.y+0.5f,
+									plane.transform.position.y,
 									Random.Range(minZ + 1, -minZ - 1));
 		} while (!Checkforfreespace(randomPosition));
 		
@@ -108,7 +108,7 @@ public class Spawner : MonoBehaviour
 		RaycastHit hit;
 
 		bool isHit =
-			Physics.BoxCast(v, spawnObject.transform.lossyScale , new Vector3(0,-1,0), out hit,
+			Physics.BoxCast(v, spawnObject.transform.lossyScale*1.2f , new Vector3(0,-1,0), out hit,
 			spawnObject.transform.rotation, maxDistance);
 
 		if (isHit)
@@ -116,7 +116,9 @@ public class Spawner : MonoBehaviour
 			if (hit.transform.tag == "Food" || hit.transform.tag == "Ground" || hit.transform.tag == "Duck")
 			{
 				Debug.Log("Spawned object on " + hit.transform.tag + ". Randomising position again.");
-				
+				Gizmos.color = Color.red;
+				Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
+				Gizmos.DrawWireCube(transform.position + transform.forward * hit.distance, transform.lossyScale);
 				return false;
 			}
 			else

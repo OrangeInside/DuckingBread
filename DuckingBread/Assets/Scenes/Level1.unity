@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 220654948}
   m_Layer: 8
   m_Name: Islands
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1751,7 +1751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 25.56, z: 0.13}
+  m_LocalPosition: {x: -2.39, y: 25.56, z: 0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5373,6 +5373,11 @@ PrefabInstance:
       propertyPath: plane
       value: 
       objectReference: {fileID: 14650364}
+    - target: {fileID: 8251457269272213870, guid: 0e9166a4502aeff4689e1adfcb2fc7b4,
+        type: 3}
+      propertyPath: MaxSpawnDelay
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e9166a4502aeff4689e1adfcb2fc7b4, type: 3}
 --- !u!1001 &3650956750103900498
