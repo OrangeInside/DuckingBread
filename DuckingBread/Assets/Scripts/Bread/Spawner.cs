@@ -116,9 +116,7 @@ public class Spawner : MonoBehaviour
 			if (hit.transform.tag == "Food" || hit.transform.tag == "Ground" || hit.transform.tag == "Duck")
 			{
 				Debug.Log("Spawned object on " + hit.transform.tag + ". Randomising position again.");
-				Gizmos.color = Color.red;
-				Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
-				Gizmos.DrawWireCube(transform.position + transform.forward * hit.distance, transform.lossyScale);
+
 				return false;
 			}
 			else
