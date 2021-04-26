@@ -84,6 +84,8 @@ public class DuckBrain : MonoBehaviour
 
                     isEating = false;
 
+                    foodTarget?.SetEatingStatus(false);
+
                     foodTarget.ConsumeFood(this);
 
                     duckMovement.EnableMovement();
@@ -99,6 +101,8 @@ public class DuckBrain : MonoBehaviour
                 duckMovement.DisableMovement();
 
                 eatingParticlesPH?.Play();
+
+                foodTarget?.SetEatingStatus(true);
             }
         }
     }

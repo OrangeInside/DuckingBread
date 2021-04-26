@@ -74,7 +74,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267423346187418411}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5100d07729ea114db90d002403378e7, type: 3}
   m_Name: 
@@ -125,6 +125,8 @@ MonoBehaviour:
   fracturedFood: {fileID: 6474045609171195800, guid: 634f47632a78b7242a96951321ce8dfb,
     type: 3}
   type: 1
+  existingTime: 7.5
+  eatingStopsDeathTimer: 0
 --- !u!95 &5458174016875266330
 Animator:
   serializedVersion: 3
