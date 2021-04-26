@@ -17,6 +17,7 @@ public class Water : MonoBehaviour
  
 	void Start ()
 	{
+	
 		Camera.main.depthTextureMode |= DepthTextureMode.Depth;
 		MeshFilter mf = GetComponent<MeshFilter> ();  
 		makeMeshLowPoly (mf);
