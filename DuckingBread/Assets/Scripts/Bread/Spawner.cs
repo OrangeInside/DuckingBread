@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
 	[Header("Objects")]
 	[SerializeField] private GameObject spawnObject;
-	[SerializeField] private GameObject plane;
+	
 
 	[Header("Spawning parameters")]
 	[SerializeField] private float MinSpawnDelay = 1;
@@ -14,12 +14,17 @@ public class Spawner : MonoBehaviour
 	public bool onCommand = false;
 	public bool spawnedAll = false;
 
+	private Mesh planeMesh;
+	private Bounds bounds;
+	private GameObject plane;
 	private List<GameObject> spawnedObjects;
 	Timer spawnTimer;
 	
 	void Start()
     {
 		plane = GameObject.FindWithTag("Walkable");
+		planeMesh = plane.GetComponent<MeshFilter>().mesh;
+		bounds = planeMesh.bounds;
 
 		// Create and start timer
 		spawnTimer = gameObject.AddComponent<Timer>();
@@ -74,14 +79,13 @@ public class Spawner : MonoBehaviour
 
 	public GameObject ObjectSpawn()
 	{
-		Vector3 randomPosition = GetARandomPos(plane);                                                  
+		Vector3 randomPosition = GetARandomPos();                                                  
         return Instantiate<GameObject>(spawnObject, randomPosition, Quaternion.identity);   
 	}
 
-	public Vector3 GetARandomPos(GameObject plane)
+	public Vector3 GetARandomPos()
 	{ 
-		Mesh planeMesh = plane.GetComponent<MeshFilter>().mesh;
-		Bounds bounds = planeMesh.bounds;
+
 		Vector3 randomPosition;
 		
 		float minX = plane.transform.position.x - plane.transform.localScale.x * bounds.size.x * 0.5f;

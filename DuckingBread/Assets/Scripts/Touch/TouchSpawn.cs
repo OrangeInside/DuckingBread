@@ -6,21 +6,16 @@ using UnityEngine;
 public class TouchSpawn : MonoBehaviour
 {
     public GameObject prefab;
-    public Camera MainCamera;
 
     [SerializeField] private LayerMask touchDetectionLayer;
 
-    void Start()
-    {
-        MainCamera = Camera.main;
-    }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Ray ray = MainCamera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
 
