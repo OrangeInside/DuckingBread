@@ -94,7 +94,7 @@ public class Spawner : MonoBehaviour
 		do
 		{
 			randomPosition = new Vector3(Random.Range(minX + 1, (-minX) - 1),
-									plane.transform.position.y,
+									plane.transform.position.y+0.5f,
 									Random.Range(minZ + 1, -minZ - 1));
 		} while (!Checkforfreespace(randomPosition));
 		
