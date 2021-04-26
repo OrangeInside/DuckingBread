@@ -2113,6 +2113,7 @@ GameObject:
   - component: {fileID: 1116416030}
   - component: {fileID: 1116416029}
   - component: {fileID: 1116416032}
+  - component: {fileID: 1116416033}
   m_Layer: 4
   m_Name: Plane
   m_TagString: Walkable
@@ -2198,6 +2199,20 @@ MonoBehaviour:
   touchDetectionLayer:
     serializedVersion: 2
     m_Bits: 16
+--- !u!64 &1116416033
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116416028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 3409bcc21d4a609439f9f13dc3f71ce7, type: 2}
 --- !u!114 &1190818412 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6961899083592086907, guid: e8bf8c9291314ca4b9bdacbba6b8f8c1,
