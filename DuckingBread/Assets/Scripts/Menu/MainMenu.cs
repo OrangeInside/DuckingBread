@@ -8,8 +8,14 @@ public class MainMenu : MonoBehaviour {
 	string playLevel = "Level1";
 	
 	private SceneFader sceneFader;
+	private void Awake()
+	{
+	
+		Application.targetFrameRate = 60;
+	
+	}
 
-    private void Start()
+	private void Start()
     {
 		sceneFader = FindObjectOfType<SceneFader>();
     }
