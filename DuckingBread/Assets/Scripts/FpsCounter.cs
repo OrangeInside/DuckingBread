@@ -7,8 +7,9 @@ using TMPro;
 public class FpsCounter : MonoBehaviour
 {
     private float timer, refresh, avgFramerate;
-    private TextMeshProUGUI fpsText;
-
+    [SerializeField] private TextMeshProUGUI fpsText;
+    [SerializeField] private TextMeshProUGUI underFpsCounterText;
+    private int underFpsCounter = 0;
     private void Start()
     {
         fpsText = GetComponent<TextMeshProUGUI>();
@@ -22,8 +23,10 @@ public class FpsCounter : MonoBehaviour
 
         if (timer <= 0) 
             avgFramerate = (int)(1f / timelapse);
-
+        if (avgFramerate <= 30)
+            underFpsCounter++;
         fpsText.text = avgFramerate.ToString();
+        underFpsCounterText.text = underFpsCounter.ToString();
     }
     
 }

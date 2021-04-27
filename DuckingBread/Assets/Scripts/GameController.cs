@@ -19,23 +19,19 @@ public class GameController : MonoBehaviour
     public float currentFeedingTime = 0;
     public bool feeding = false;
 
-    
-
     private void Awake()
     {
         GameController.Instance = this;
-        Application.targetFrameRate = 60;
+       // Application.targetFrameRate = 60;
         if (timeToGetMaxSeed != 0)
             seedPerSecond = maxSeedLevel / timeToGetMaxSeed;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         ducks = GameObject.FindGameObjectsWithTag("Duck");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(seedLevel < maxSeedLevel && !feeding)
