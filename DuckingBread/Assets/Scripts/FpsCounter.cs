@@ -23,7 +23,7 @@ public class FpsCounter : MonoBehaviour
 
         if (timer <= 0) 
             avgFramerate = (int)(1f / timelapse);
-        if (avgFramerate <= 30)
+        if (avgFramerate < 30)
             underFpsCounter++;
         fpsText.text = avgFramerate.ToString();
         underFpsCounterText.text = underFpsCounter.ToString();
