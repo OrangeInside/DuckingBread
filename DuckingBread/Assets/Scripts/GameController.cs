@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         GameController.Instance = this;
-
+        Application.targetFrameRate = 60;
         if (timeToGetMaxSeed != 0)
             seedPerSecond = maxSeedLevel / timeToGetMaxSeed;
     }
