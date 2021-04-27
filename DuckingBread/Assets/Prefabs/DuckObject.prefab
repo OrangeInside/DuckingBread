@@ -5175,6 +5175,8 @@ MonoBehaviour:
   quackChance: 20
   hungryHolder: {fileID: 4346003480293285771}
   eatingBar: {fileID: 1365865139282852309}
+  eatingGoodFood: {r: 0.96470594, g: 0.69803923, b: 0.41960788, a: 1}
+  eatingBadFood: {r: 0.8490566, g: 0.03604484, b: 0.03604484, a: 1}
   quackSounds:
   - {fileID: 8300000, guid: a0ec42df1745cd549897530f6eb06fd8, type: 3}
   - {fileID: 8300000, guid: 6a0c59a9a6f032247af13e0fdab2cc36, type: 3}

@@ -54,7 +54,8 @@ public class GameController : MonoBehaviour
         {
             currentFeedingTime -= Time.deltaTime;
 
-            UIManager.Instance.UpdateTimer();
+            UIManager.Instance.UpdateUI();
+            //UIManager.Instance.UpdateTimer();
             if (currentFeedingTime < 0)
             {
                 TurnOffFeedingTime();
@@ -78,7 +79,7 @@ public class GameController : MonoBehaviour
         feeding = false;
         DucksManager.Instance.ToggleHungryMeters(false);
         StartBreadSpawner();
-        UIManager.Instance.ToggleTimer(false);
+        //UIManager.Instance.ToggleTimer(false);
     }
 
     public void SeedEaten(GameObject seed)
@@ -103,7 +104,7 @@ public class GameController : MonoBehaviour
         currentFeedingTime = feedingTime;
         seedSpawner.SpawnOnCommand(seedsToSpawn);
         DucksManager.Instance.ToggleHungryMeters(true);
-        UIManager.Instance.ToggleTimer(true);
+        //UIManager.Instance.ToggleTimer(true);
 
     }
 

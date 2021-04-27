@@ -13,6 +13,8 @@ public class DuckBrain : MonoBehaviour
     [SerializeField] private float quackChance;
     public GameObject hungryHolder;
     [SerializeField] private Image eatingBar;
+    [SerializeField] private Color eatingGoodFood;
+    [SerializeField] private Color eatingBadFood;
     public AudioClip[] quackSounds;
     public AudioClip[] diveSounds;
 
@@ -78,6 +80,11 @@ public class DuckBrain : MonoBehaviour
             {
                 currentEatingTime += Time.deltaTime;
                 eatingBar.fillAmount = currentEatingTime / timeToEat;
+                if (foodTarget.Type == FoodType.Bad)
+                    eatingBar.color = eatingBadFood;
+                else
+                    eatingBar.color = eatingGoodFood;
+
                 if (currentEatingTime >= timeToEat)
                 {
                     eatingParticlesPH?.Stop();

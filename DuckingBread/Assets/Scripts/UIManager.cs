@@ -24,7 +24,11 @@ public class UIManager : MonoBehaviour
 
     public void UpdateUI()
     {
-        seedBar.fillAmount = GameController.Instance.seedLevel / GameController.Instance.maxSeedLevel;
+        if(!GameController.Instance.feeding)
+            seedBar.fillAmount = GameController.Instance.seedLevel / GameController.Instance.maxSeedLevel;
+        else
+            seedBar.fillAmount = GameController.Instance.currentFeedingTime / GameController.Instance.feedingTime;
+
     }
 
     public void UpdateTimer()
