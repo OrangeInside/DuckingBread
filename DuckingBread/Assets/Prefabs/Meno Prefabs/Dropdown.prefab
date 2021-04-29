@@ -128,13 +128,13 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: Very low
+      m_Image: {fileID: 0}
     - m_Text: Low
       m_Image: {fileID: 0}
     - m_Text: Medium
       m_Image: {fileID: 0}
     - m_Text: High
-      m_Image: {fileID: 0}
-    - m_Text: Test
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -164,10 +164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qualitylevels:
+  - {fileID: 11400000, guid: 462a31180073f8844bcb1566a8d3e8a2, type: 2}
   - {fileID: 11400000, guid: 28c1991e89908dc46b3a8175e28972ba, type: 2}
   - {fileID: 11400000, guid: 83c67b0ab8ff6e0418b299298e21415b, type: 2}
   - {fileID: 11400000, guid: 4959dcebcff06a34d8d05bd34e5a398a, type: 2}
-  - {fileID: 11400000, guid: 462a31180073f8844bcb1566a8d3e8a2, type: 2}
   dropdown: {fileID: 436842270778250732}
 --- !u!1 &436842270832819840
 GameObject:
