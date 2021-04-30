@@ -103,7 +103,7 @@ public class Spawner : MonoBehaviour
 
 	public bool Checkforfreespace(Vector3 v)
 	{
-		v.y += 2f;
+		v.y += 4f;
 		float maxDistance = 5f;
 		RaycastHit hit;
 
