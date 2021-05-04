@@ -9,6 +9,7 @@ TagManager:
   - Duck
   - Food
   - Ground
+  - Grass
   layers:
   - Default
   - TransparentFX

@@ -91,7 +91,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _TopColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TopColor: {r: 0.40503737, g: 0.6981132, b: 0.4219456, a: 1}
 --- !u!114 &195022946650167414
 MonoBehaviour:
   m_ObjectHideFlags: 11
