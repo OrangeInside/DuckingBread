@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stealth : MonoBehaviour
 {
    public  GameObject duck;
+    [Range(0,1)]
     public float trans = 0.1f;
     // Start is called before the first frame update
     void Start()

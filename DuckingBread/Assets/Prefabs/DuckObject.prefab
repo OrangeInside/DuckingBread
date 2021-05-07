@@ -5389,6 +5389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duck: {fileID: 4493889000509935693}
+  trans: 0.255
 --- !u!1 &879234709107305241
 GameObject:
   m_ObjectHideFlags: 0
