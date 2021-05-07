@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stealth : MonoBehaviour
 {
    public  GameObject duck;
+    public float trans = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,19 +23,23 @@ public class Stealth : MonoBehaviour
         if (coll.gameObject.tag == "Grass")
         {
             Color color = duck.GetComponent <SkinnedMeshRenderer> ().material.color;
-            color.a =0.4f;
+            color.a = trans;
             duck.GetComponent<SkinnedMeshRenderer>().material.color = color;
             Debug.Log("Znikam");
         }
+
       
     }
-     void OnTriggerExit( )
+     void OnTriggerExit(Collider coll)
     {
-       
+        if (coll.gameObject.tag == "Grass")
+        {
             Color color = duck.GetComponent<SkinnedMeshRenderer>().material.color;
             color.a = 1f;
             duck.GetComponent<SkinnedMeshRenderer>().material.color = color;
-       
+
+        }
+
 
     }
 }
