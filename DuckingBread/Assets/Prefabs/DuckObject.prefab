@@ -5091,6 +5091,7 @@ GameObject:
   - component: {fileID: 1133996223}
   - component: {fileID: 1133996224}
   - component: {fileID: 1362982894}
+  - component: {fileID: 3911026103096954815}
   m_Layer: 0
   m_Name: DuckObject
   m_TagString: Duck
@@ -5341,7 +5342,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!136 &1133996224
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5375,6 +5376,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3911026103096954815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246598298164919058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3ccef848de80b45994bcb632737280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duck: {fileID: 4493889000509935693}
 --- !u!1 &879234709107305241
 GameObject:
   m_ObjectHideFlags: 0
@@ -15538,15 +15552,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5288bcae7c7c95d459960afa3c4bb824, type: 3}
---- !u!4 &353161644573480591 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5288bcae7c7c95d459960afa3c4bb824,
-    type: 3}
-  m_PrefabInstance: {fileID: 246598298153333092}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1129697661338258485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5288bcae7c7c95d459960afa3c4bb824,
+    type: 3}
+  m_PrefabInstance: {fileID: 246598298153333092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &353161644573480591 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5288bcae7c7c95d459960afa3c4bb824,
     type: 3}
   m_PrefabInstance: {fileID: 246598298153333092}
   m_PrefabAsset: {fileID: 0}
