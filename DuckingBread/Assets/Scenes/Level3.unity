@@ -10577,7 +10577,7 @@ PrefabInstance:
     - target: {fileID: 3653933712554959069, guid: 0e9166a4502aeff4689e1adfcb2fc7b4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7425746174497592100, guid: 0e9166a4502aeff4689e1adfcb2fc7b4,
         type: 3}
@@ -10722,10 +10722,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4303772516496631009, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
+    - target: {fileID: 4303772516496631008, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
         type: 3}
-      propertyPath: speed
-      value: 0.3
+      propertyPath: m_Carve
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303772516496631008, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
+        type: 3}
+      propertyPath: m_MoveThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303772516496631008, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
+        type: 3}
+      propertyPath: m_Extents.x
+      value: 2.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303772516496631008, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
+        type: 3}
+      propertyPath: m_Extents.z
+      value: 1.285
       objectReference: {fileID: 0}
     - target: {fileID: 4771225333382314273, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
         type: 3}
@@ -11123,22 +11138,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31300175493e3ea498f84b94e57988a8, type: 3}
---- !u!1 &8758619896520518180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4771225333382314273, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4303772517528425221}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &8758619896520518181
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8758619896520518180}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.5
-  m_Center: {x: 0, y: 0, z: 0}

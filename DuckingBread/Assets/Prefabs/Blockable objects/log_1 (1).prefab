@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 4303772516496631008}
   - component: {fileID: 3262807694213198793}
   - component: {fileID: 4303772516496631009}
-  - component: {fileID: 4303772516496631020}
-  - component: {fileID: 8758619896520518181}
   m_Layer: 0
   m_Name: log_1 (1)
   m_TagString: Untagged
@@ -94,7 +92,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 1.5610001, y: 0.734, z: 0.68700004}
+  m_Extents: {x: 1.855, y: 0.734, z: 0.68700004}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -143,33 +141,3 @@ MonoBehaviour:
   posA: {x: 0, y: 0, z: 0}
   posB: {x: 0, y: 0, z: 0}
   nexPos: {x: 0, y: 0, z: 0}
---- !u!114 &4303772516496631020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4771225333382314273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 256008641e3487442bd75f52df3b6ea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  power: 3
-  radius: 5
-  upforce: 1
-  destroyTime: 1
-  destroyable: 0
---- !u!135 &8758619896520518181
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4771225333382314273}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.5
-  m_Center: {x: 0, y: 0, z: 0}
