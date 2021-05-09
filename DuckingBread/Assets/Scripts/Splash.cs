@@ -8,11 +8,12 @@ public class Splash : MonoBehaviour
     public float radius = 5.0f;
     public float upforce = 1.0f;
     public float destroyTime = 1;
-  
+    public bool destroyable = true;
 
-    // Start is called before the first frame update
-    void Start()
+      // Start is called before the first frame update
+      void Start()
     {
+       
         this.GetComponent<AudioManager>().PlayRandomSound();
         this.Detonate();
     }
@@ -21,10 +22,11 @@ public class Splash : MonoBehaviour
     void Update()
     {
         this.Detonate();
+        if (destroyable == true)
         Destroy(gameObject, destroyTime);
     }
 
-    void Detonate()
+    public void Detonate()
     {
         Vector3 explosionPosition = this.transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPosition, radius);

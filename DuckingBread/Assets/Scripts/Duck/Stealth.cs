@@ -26,7 +26,7 @@ public class Stealth : MonoBehaviour
             Color color = duck.GetComponent <SkinnedMeshRenderer> ().material.color;
             color.a = trans;
             duck.GetComponent<SkinnedMeshRenderer>().material.color = color;
-            Debug.Log("Znikam");
+           // Debug.Log("Znikam");
         }
 
       
