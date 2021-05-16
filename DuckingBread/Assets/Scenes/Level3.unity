@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -798,7 +798,7 @@ PrefabInstance:
     - target: {fileID: 4818168787728694378, guid: 6fcee2008634b7642bff2233e3d5c511,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.91
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4818168787728694378, guid: 6fcee2008634b7642bff2233e3d5c511,
         type: 3}
@@ -852,25 +852,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fcee2008634b7642bff2233e3d5c511, type: 3}
---- !u!1 &462335950 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4818168787728694381, guid: 6fcee2008634b7642bff2233e3d5c511,
-    type: 3}
-  m_PrefabInstance: {fileID: 462335949}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &462335951
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462335950}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 3, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &519590282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,10 +1189,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 795595506}
     m_Modifications:
-    - target: {fileID: 1133996223, guid: 221a793edfd529b48a6e8301ac310005, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919058, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_Name
@@ -1222,11 +1199,6 @@ PrefabInstance:
       propertyPath: waterSurface
       value: 
       objectReference: {fileID: 14650364}
-    - target: {fileID: 246598298164919069, guid: 221a793edfd529b48a6e8301ac310005,
-        type: 3}
-      propertyPath: m_BaseOffset
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10722,26 +10694,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4303772516496631008, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
-        type: 3}
-      propertyPath: m_Carve
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303772516496631008, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
-        type: 3}
-      propertyPath: m_MoveThreshold
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303772516496631008, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
-        type: 3}
-      propertyPath: m_Extents.x
-      value: 2.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303772516496631008, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
-        type: 3}
-      propertyPath: m_Extents.z
-      value: 1.285
-      objectReference: {fileID: 0}
     - target: {fileID: 4771225333382314273, guid: 5b19fba431a0b9047a92fdb36ce0c60b,
         type: 3}
       propertyPath: m_Name

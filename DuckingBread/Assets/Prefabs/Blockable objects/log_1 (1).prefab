@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4303772516496631009}
   m_Layer: 0
   m_Name: log_1 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,9 +92,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 1.855, y: 0.734, z: 0.68700004}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Extents: {x: 2.025, y: 0.734, z: 1.285}
+  m_MoveThreshold: 0.5
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.040000003, y: 0.734, z: 0.055000003}
   m_TimeToStationary: 0.5
