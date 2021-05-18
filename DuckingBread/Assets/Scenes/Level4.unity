@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2536,6 +2536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassSquare
       objectReference: {fileID: 0}
+    - target: {fileID: 4818168787728694381, guid: 6fcee2008634b7642bff2233e3d5c511,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fcee2008634b7642bff2233e3d5c511, type: 3}
 --- !u!4 &515260674 stripped
@@ -3416,6 +3421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrassSquare (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818168787728694381, guid: 6fcee2008634b7642bff2233e3d5c511,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fcee2008634b7642bff2233e3d5c511, type: 3}
@@ -12327,7 +12337,7 @@ PrefabInstance:
     - target: {fileID: 6315715842246413658, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
         type: 3}
       propertyPath: timeToGetMaxSeed
-      value: 5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6315715842246413659, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
         type: 3}
