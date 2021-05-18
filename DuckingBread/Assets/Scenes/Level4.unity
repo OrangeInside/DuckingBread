@@ -12324,6 +12324,11 @@ PrefabInstance:
       propertyPath: feedingTime
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6315715842246413658, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
+        type: 3}
+      propertyPath: timeToGetMaxSeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6315715842246413659, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
         type: 3}
       propertyPath: m_Name
