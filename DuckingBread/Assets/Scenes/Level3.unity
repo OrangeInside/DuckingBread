@@ -7652,7 +7652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -18712,27 +18712,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1398227435253723688}
-    - target: {fileID: 544021754, guid: 4d855e88e4568c848b560f7b06078db0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Menu
-      objectReference: {fileID: 0}
     - target: {fileID: 746937587, guid: 4d855e88e4568c848b560f7b06078db0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1398227435253723688}
-    - target: {fileID: 746937587, guid: 4d855e88e4568c848b560f7b06078db0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Retry
-      objectReference: {fileID: 0}
     - target: {fileID: 21218998584149961, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1398227435253723688}
-    - target: {fileID: 21218998584149961, guid: 4d855e88e4568c848b560f7b06078db0,
+    - target: {fileID: 312313279821795824, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Menu
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 335837851312747153, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
@@ -18844,81 +18836,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
-    - target: {fileID: 538680238752860391, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 538680239249280077, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1595779275951848284, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1398227435253723688}
-    - target: {fileID: 1595779275951848284, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Toggle
-      objectReference: {fileID: 0}
-    - target: {fileID: 2463854956490351721, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1398227435253723688}
     - target: {fileID: 2463854956490351721, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Retry
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1398227435253723688}
     - target: {fileID: 3437183121919500596, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 6315715843298718264}
-    - target: {fileID: 3437183121919500596, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClearSeedLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3437183121919500596, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3867141802449072537, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1398227435253723688}
-    - target: {fileID: 3867141802449072537, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Toggle
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729752221206103713, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1398227435253723688}
     - target: {fileID: 7729752221206103713, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Menu
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1398227435253723688}
     - target: {fileID: 9119179062862324309, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1398227435253723688}
-    - target: {fileID: 9119179062862324309, guid: 4d855e88e4568c848b560f7b06078db0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: NextLevel
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d855e88e4568c848b560f7b06078db0, type: 3}
 --- !u!1001 &1887441749
@@ -19427,7 +19374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1925159020
 AudioListener:
   m_ObjectHideFlags: 0
@@ -19463,7 +19410,7 @@ Camera:
   far clip plane: 1000
   field of view: 68.31968
   orthographic: 1
-  orthographic size: 27
+  orthographic size: 19.89
   m_Depth: -5
   m_CullingMask:
     serializedVersion: 2
