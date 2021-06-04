@@ -138,7 +138,7 @@ clip(detailNoise* smoothNoise - height);
     lightingInput.normalWS = NormalizeNormalPerPixel(input.normalWS); // Renormalize the normal to reduce interpolation errors
     lightingInput.viewDirectionWS = GetViewDirectionFromPosition(input.positionWS); // Calculate the view direction
     lightingInput.shadowCoord = CalculateShadowCoord(input.positionWS, input.positionCS); // Calculate the shadow map coord
-
+  
     // Lerp between the two grass colors based on layer height
     float3 albedo = lerp(_BaseColor, _TopColor, height).rgb;
 

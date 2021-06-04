@@ -8,7 +8,7 @@ public class TouchSpawn : MonoBehaviour
     public GameObject prefab;
 
     [SerializeField] private LayerMask touchDetectionLayer;
-
+    [SerializeField] private LayerMask blocktouchDetectionLayer =8;
 
     // Update is called once per frame
     void Update()
@@ -18,9 +18,12 @@ public class TouchSpawn : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
-
-            if(Physics.Raycast(ray, out hit, Mathf.Infinity, touchDetectionLayer))
+            RaycastHit hit1;
+            Physics.Raycast(ray, out hit1, Mathf.Infinity, blocktouchDetectionLayer);
+           
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, touchDetectionLayer) && hit1.point == Vector3.zero)
             {
+               
                 Instantiate(prefab, hit.point, Quaternion.identity);
             }
            

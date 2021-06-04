@@ -24,7 +24,7 @@ Shader "Grass/GrassLayers" {
                 Name "ForwardLit"
                 Tags{"LightMode" = "UniversalForward"}
                 Cull Back
-
+      
                 HLSLPROGRAM
             // Signal this shader requires geometry function support
             #pragma prefer_hlslcc gles
@@ -43,9 +43,10 @@ Shader "Grass/GrassLayers" {
             #pragma vertex Vertex
             #pragma geometry Geometry
             #pragma fragment Fragment
-
+            #pragma multi_compile_instancing
             // Incude our logic file
             #include "GrassLayers.hlsl"    
+           
 
             ENDHLSL
         }
@@ -69,7 +70,9 @@ Shader "Grass/GrassLayers" {
             #pragma vertex Vertex
             #pragma geometry Geometry
             #pragma fragment Fragment
-
+          
+      
+        
             // A custom keyword to modify logic during the shadow caster pass
             #define SHADOW_CASTER_PASS
             // Incude our logic file
@@ -78,4 +81,5 @@ Shader "Grass/GrassLayers" {
             ENDHLSL
         }
         }
+      
 }

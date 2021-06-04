@@ -10058,6 +10058,9 @@ MonoBehaviour:
   touchDetectionLayer:
     serializedVersion: 2
     m_Bits: 16
+  blocktouchDetectionLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!64 &1291659860
 MeshCollider:
   m_ObjectHideFlags: 0
