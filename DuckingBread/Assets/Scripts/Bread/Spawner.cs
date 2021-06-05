@@ -108,7 +108,7 @@ public class Spawner : MonoBehaviour
 		RaycastHit hit;
 
 		bool isHit =
-			Physics.BoxCast(v, spawnObject.transform.lossyScale*1.2f , new Vector3(0,-1,0), out hit,
+			Physics.BoxCast(v, spawnObject.transform.localScale*1.2f , new Vector3(0,-1,0), out hit,
 			spawnObject.transform.rotation, maxDistance);
 
 		if (isHit)

@@ -8,7 +8,7 @@ public class TouchSpawn : MonoBehaviour
     public GameObject prefab;
 
     [SerializeField] private LayerMask touchDetectionLayer;
-    [SerializeField] private LayerMask blocktouchDetectionLayer =8;
+    [SerializeField] private LayerMask blocktouchDetectionLayer;
 
     // Update is called once per frame
     void Update()

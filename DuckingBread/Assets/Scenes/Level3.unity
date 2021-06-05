@@ -7840,6 +7840,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FastDuck
       objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919058, guid: fc982e68e749a0d4d91f7818cc92f083,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919070, guid: fc982e68e749a0d4d91f7818cc92f083,
         type: 3}
       propertyPath: m_LocalPosition.x
