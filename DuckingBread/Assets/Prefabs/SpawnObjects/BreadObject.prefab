@@ -170,31 +170,13 @@ Transform:
   m_GameObject: {fileID: 4818865930749061272}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 80, y: 80, z: 80}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8615731820721086823}
   - {fileID: 9016117457479072994}
   m_Father: {fileID: 7518363810211379009}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &3278040903292617701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8996761443834297309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 7.87
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1001 &1888406823595480340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -334,17 +316,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f8bd7187de46f7843855630feb78fcf9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8bd7187de46f7843855630feb78fcf9,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8bd7187de46f7843855630feb78fcf9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f8bd7187de46f7843855630feb78fcf9,
         type: 3}
@@ -363,12 +345,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8bd7187de46f7843855630feb78fcf9, type: 3}
---- !u!1 &8996761443834297309 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f8bd7187de46f7843855630feb78fcf9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8078194444729403020}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8615731820721086823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f8bd7187de46f7843855630feb78fcf9,
@@ -470,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f8bd7187de46f7843855630feb78fcf9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8bd7187de46f7843855630feb78fcf9, type: 3}

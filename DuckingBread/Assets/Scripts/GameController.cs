@@ -43,8 +43,7 @@ public class GameController : MonoBehaviour
 
                 //FindAndDestroyAllBreads();
                 StopBreadSpawner();
-                //  UIManager.Instance.ToggleSeedButton(true);
-                ClearSeedLevel();
+                UIManager.Instance.ToggleSeedButton(true);
             }    
 
             UIManager.Instance.UpdateUI();
