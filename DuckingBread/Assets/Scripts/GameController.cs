@@ -10,8 +10,13 @@ public class GameController : MonoBehaviour
     public GameObject[] ducks;
    
    public float timeToGetMaxSeed;
+    public float randomsnowtime;
+    public bool SnowEnabled = false;
     public float maxSeedLevel = 100;
+    public float maxSnowLevel = 100;
+    public float SnowLevel = 0f;
     public float seedPerSecond = 0.5f;
+    public float snowPerSecond = 0.5f;
     public float seedLevel = 0f;
     public float feedingTime = 30;
     public int seedsToSpawn;
@@ -19,25 +24,76 @@ public class GameController : MonoBehaviour
     public Spawner seedSpawner;
     public float currentFeedingTime = 0;
     public bool feeding = false;
+    public bool snowing = true;
     public GameObject Vignette;
+    public GameObject Snow;
+    public Material[] SnowMaterials;
     private void Awake()
     {
         GameController.Instance = this;
         Application.targetFrameRate = 60;
         if (timeToGetMaxSeed != 0)
             seedPerSecond = maxSeedLevel / timeToGetMaxSeed;
+        if(SnowEnabled)
+        {
+            randomsnowtime = Random.Range(0, 10);
+            if (randomsnowtime != 0)
+                snowPerSecond = maxSeedLevel / randomsnowtime;
+        }
+     
     }
 
     void Start()
     {
         ducks = GameObject.FindGameObjectsWithTag("Duck");
-       
+        foreach (Material m in SnowMaterials)
+        {
 
+            m.SetFloat("Vector1_23607EFC", 0);
+        }
+        if (SnowEnabled)
+        {
+            Snow.SetActive(snowing);
+        }
     }
 
     void Update()
     {
-        if(seedLevel < maxSeedLevel && !feeding)
+        if (SnowEnabled)
+       {
+            if (SnowLevel < maxSnowLevel && snowing)
+        {
+            SnowLevel += randomsnowtime * Time.deltaTime;
+            if (SnowLevel >= maxSnowLevel)
+            {
+                SnowLevel = maxSnowLevel;
+                snowing = false;
+                Snow.SetActive(snowing);
+            }    
+            foreach(Material m in SnowMaterials)
+            {
+               
+                m.SetFloat("Vector1_23607EFC", SnowLevel / 100);
+            }
+           
+        }
+        if(!snowing)
+        {
+          
+            SnowLevel -= randomsnowtime * Time.deltaTime;
+            if (SnowLevel <= 0)
+            {
+                SnowLevel = 0;
+                snowing = true;
+                Snow.SetActive(snowing);
+            }
+            foreach (Material m in SnowMaterials)
+            {
+                m.SetFloat("Vector1_23607EFC", SnowLevel / 100);
+            }
+        }
+       }
+        if (seedLevel < maxSeedLevel && !feeding)
         {
             seedLevel += seedPerSecond * Time.deltaTime;
             if (seedLevel >= maxSeedLevel)
@@ -48,13 +104,12 @@ public class GameController : MonoBehaviour
                 StopBreadSpawner();
                 //  UIManager.Instance.ToggleSeedButton(true);
                 ClearSeedLevel();
-            }    
+            }
 
             UIManager.Instance.UpdateUI();
         }
-
         // no bread spawning during feeding time
-        if(feeding)
+        if (feeding)
         {
             currentFeedingTime -= Time.deltaTime;
            
