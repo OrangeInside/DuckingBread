@@ -10,6 +10,7 @@ TagManager:
   - Food
   - Ground
   - Grass
+  - Post
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - Ground
   - Food
-  - 
+  - PostProcess
   - 
   - 
   - 
@@ -46,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: PostProcess
+    uniqueID: 1414378757
     locked: 0

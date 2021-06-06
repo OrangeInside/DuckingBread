@@ -6725,6 +6725,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8c80efe80485ec4486c95ae9ca8645d, type: 3}
+--- !u!1 &931734097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3338209418866608074, guid: 4d855e88e4568c848b560f7b06078db0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1879252813}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &933196249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 012aa62a24fb94f46baeff71ad4245d0,
@@ -7104,7 +7110,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PerspCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -7196,7 +7202,7 @@ MonoBehaviour:
   m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1024
   m_VolumeTrigger: {fileID: 0}
   m_RenderPostProcessing: 1
   m_Antialiasing: 0
@@ -12962,7 +12968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 641044532, guid: 4d855e88e4568c848b560f7b06078db0, type: 3}
       propertyPath: m_text
-      value: SEED FRENZY
+      value: DUCK FRENZY
       objectReference: {fileID: 0}
     - target: {fileID: 746937587, guid: 4d855e88e4568c848b560f7b06078db0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -13121,6 +13127,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Retry
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338209418866608074, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338209418866608074, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Post
       objectReference: {fileID: 0}
     - target: {fileID: 3437183121919500596, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
@@ -15071,8 +15087,13 @@ PrefabInstance:
     - target: {fileID: 6315715842246413658, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
         type: 3}
       propertyPath: timeToGetMaxSeed
-      value: 30
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6315715842246413658, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
+        type: 3}
+      propertyPath: Vignette
+      value: 
+      objectReference: {fileID: 931734097}
     - target: {fileID: 6315715842246413659, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
         type: 3}
       propertyPath: m_Name

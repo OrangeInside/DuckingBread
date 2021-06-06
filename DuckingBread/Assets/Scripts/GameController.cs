@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 public class GameController : MonoBehaviour
 {
     public static GameController Instance = null;
@@ -18,7 +19,7 @@ public class GameController : MonoBehaviour
     public Spawner seedSpawner;
     public float currentFeedingTime = 0;
     public bool feeding = false;
-
+    public GameObject Vignette;
     private void Awake()
     {
         GameController.Instance = this;
@@ -30,6 +31,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         ducks = GameObject.FindGameObjectsWithTag("Duck");
+       
+
     }
 
     void Update()
@@ -40,7 +43,7 @@ public class GameController : MonoBehaviour
             if (seedLevel >= maxSeedLevel)
             {
                 seedLevel = maxSeedLevel;
-
+                Vignette.SetActive(true);
                 //FindAndDestroyAllBreads();
                 StopBreadSpawner();
                 //  UIManager.Instance.ToggleSeedButton(true);
@@ -54,7 +57,7 @@ public class GameController : MonoBehaviour
         if(feeding)
         {
             currentFeedingTime -= Time.deltaTime;
-
+           
             UIManager.Instance.UpdateUI();
             //UIManager.Instance.UpdateTimer();
             if (currentFeedingTime < 0)
@@ -62,6 +65,10 @@ public class GameController : MonoBehaviour
                 TurnOffFeedingTime();
             }
 
+        }
+        else
+        {
+            Vignette.SetActive(false);
         }
     }
     public void FindAndDestroyAllBreads()
