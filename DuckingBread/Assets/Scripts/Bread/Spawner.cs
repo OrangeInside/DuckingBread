@@ -103,12 +103,12 @@ public class Spawner : MonoBehaviour
 
 	public bool Checkforfreespace(Vector3 v)
 	{
-		//v.y += 15f;
+		v.y += 15f;
 		float maxDistance = 1000f;
 		RaycastHit hit;
 
 		bool isHit =
-			Physics.BoxCast(v, spawnObject.transform.localScale*1.2f , new Vector3(0,-1,0), out hit,
+			Physics.BoxCast(v, spawnObject.transform.lossyScale/2 , new Vector3(0,-1,0), out hit,
 			spawnObject.transform.rotation, maxDistance);
 
 		if (isHit)

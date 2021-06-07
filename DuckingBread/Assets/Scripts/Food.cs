@@ -65,7 +65,13 @@ public class Food : MonoBehaviour
 
         Destroy(this.gameObject);
     }
-
+    void OnCollisionStay(Collision collisionInfo)
+    {
+        // Debug-draw all contact points and normals
+     
+            Debug.Log(collisionInfo.collider.tag);
+        Destroy(this.gameObject);
+    }
     private void OnDestroy()
     {
         if (fracturedFood)
