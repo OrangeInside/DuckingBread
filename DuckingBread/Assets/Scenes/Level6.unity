@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13294,7 +13294,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aae5c8d1fd84746428a2239fd95e4b98, type: 2}
+  - {fileID: 2100000, guid: 7c9d6983f275678479ebf019a670f9cf, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -13354,7 +13354,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -23039,6 +23039,11 @@ PrefabInstance:
       propertyPath: MaxSpawnDelay
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8251457269272213870, guid: 0e9166a4502aeff4689e1adfcb2fc7b4,
+        type: 3}
+      propertyPath: MinSpawnDelay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e9166a4502aeff4689e1adfcb2fc7b4, type: 3}
 --- !u!1001 &3650956750103900498
@@ -23674,6 +23679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: SnowEnabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315715842246413658, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
+        type: 3}
+      propertyPath: lives
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6315715842246413659, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
         type: 3}

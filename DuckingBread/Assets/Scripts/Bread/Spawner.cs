@@ -104,26 +104,41 @@ public class Spawner : MonoBehaviour
 	public bool Checkforfreespace(Vector3 v)
 	{
 		v.y += 15f;
-		float maxDistance = 1000f;
-		RaycastHit hit;
+		float maxDistance = 100f;
+	//	RaycastHit hit;
 
-		bool isHit =
-			Physics.BoxCast(v, spawnObject.transform.lossyScale/2 , new Vector3(0,-1,0), out hit,
+		//bool isHit =
+		//	Physics.BoxCast(v, spawnObject.transform.lossyScale, new Vector3(0,-1,0), out hit,
+		//	spawnObject.transform.rotation, maxDistance);
+
+		//if (isHit)
+		//{
+		//	if (hit.transform.tag == "Food" || hit.transform.tag == "Ground" || hit.transform.tag == "Duck")
+		//	{
+		//		Debug.Log("Spawned object on " + hit.transform.tag + ". Randomising position again.");
+
+		//		return false;
+		//	}
+		//	else
+		//		return true;
+
+		//}
+		RaycastHit[] tableofhits = Physics.BoxCastAll(v, spawnObject.transform.lossyScale, new Vector3(0, -1, 0),
 			spawnObject.transform.rotation, maxDistance);
+		if(tableofhits!=null)
+        {
+			foreach(RaycastHit hit in tableofhits)
+            {
+                if (hit.transform.tag == "Food" || hit.transform.tag == "Ground" || hit.transform.tag == "Duck")
+                {
+                    Debug.Log("Spawned object on " + hit.transform.tag + ". Randomising position again.");
 
-		if (isHit)
-		{
-			if (hit.transform.tag == "Food" || hit.transform.tag == "Ground" || hit.transform.tag == "Duck")
-			{
-				Debug.Log("Spawned object on " + hit.transform.tag + ". Randomising position again.");
-
-				return false;
-			}
-			else
-				return true;
-			
+                    return false;
+                }
+            }
+			return true;
 		}
-		
+
 		return true;
 	}
 }
