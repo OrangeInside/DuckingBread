@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5739265784466868192
 Transform:
@@ -78,7 +78,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5739265784868802961
 Transform:
@@ -172,7 +172,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5739265784889300002
 Transform:
@@ -319,7 +319,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5739265785152590586
 Transform:
@@ -413,7 +413,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5739265785375513114
 Transform:
@@ -506,7 +506,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5739265785484232618
 Transform:
@@ -562,6 +562,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: stump_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562395634056801352, guid: a933790d6c3427d409ec6b73443fd03d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562395634056801352, guid: a933790d6c3427d409ec6b73443fd03d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1565661228984146508, guid: a933790d6c3427d409ec6b73443fd03d,
         type: 3}
@@ -638,6 +648,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5739265785136062693}
     m_Modifications:
+    - target: {fileID: -8888591502436945834, guid: 012aa62a24fb94f46baeff71ad4245d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 012aa62a24fb94f46baeff71ad4245d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -693,10 +708,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4113313142810392835, guid: 012aa62a24fb94f46baeff71ad4245d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 012aa62a24fb94f46baeff71ad4245d0,
         type: 3}
       propertyPath: m_Name
       value: Terrain_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 012aa62a24fb94f46baeff71ad4245d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9055022704960484834, guid: 012aa62a24fb94f46baeff71ad4245d0,
         type: 3}
@@ -773,15 +798,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: -516098083770646512, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Name
       value: Terrain_corner_alt
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b1ed04b018ab6469664a44c2b1ae59, type: 3}
@@ -863,6 +903,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain_corner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5f7433d2cf5738644a4130c37bbbdf3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2524043748793888525, guid: 5f7433d2cf5738644a4130c37bbbdf3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531270665383298573, guid: 5f7433d2cf5738644a4130c37bbbdf3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f7433d2cf5738644a4130c37bbbdf3f, type: 3}
 --- !u!4 &957899635741974896 stripped
@@ -933,16 +988,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2799496263753831082, guid: a43d4298d80203649ade63ec6c7b521c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a43d4298d80203649ade63ec6c7b521c,
         type: 3}
       propertyPath: m_Name
       value: Terrain_3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a43d4298d80203649ade63ec6c7b521c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6684946167150014162, guid: a43d4298d80203649ade63ec6c7b521c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: 7209392898084574458, guid: a43d4298d80203649ade63ec6c7b521c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a43d4298d80203649ade63ec6c7b521c, type: 3}
 --- !u!4 &959144486924503841 stripped
@@ -1013,15 +1083,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: -516098083770646512, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Name
       value: Terrain_corner_alt (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b1ed04b018ab6469664a44c2b1ae59, type: 3}
@@ -1093,15 +1178,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: -516098083770646512, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Name
       value: Terrain_corner_alt (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b1ed04b018ab6469664a44c2b1ae59, type: 3}
@@ -1173,16 +1273,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2799496263753831082, guid: a43d4298d80203649ade63ec6c7b521c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a43d4298d80203649ade63ec6c7b521c,
         type: 3}
       propertyPath: m_Name
       value: Terrain_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a43d4298d80203649ade63ec6c7b521c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6684946167150014162, guid: a43d4298d80203649ade63ec6c7b521c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: 7209392898084574458, guid: a43d4298d80203649ade63ec6c7b521c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a43d4298d80203649ade63ec6c7b521c, type: 3}
 --- !u!4 &4084054976761767275 stripped
@@ -1253,15 +1368,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: -516098083770646512, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Name
       value: Terrain_corner_alt (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b1ed04b018ab6469664a44c2b1ae59, type: 3}
@@ -1343,6 +1473,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: flower_4
       objectReference: {fileID: 0}
+    - target: {fileID: 3295013230350207282, guid: c604c942400f54d4d9ef85b9299ac3a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295013230350207282, guid: c604c942400f54d4d9ef85b9299ac3a9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c604c942400f54d4d9ef85b9299ac3a9, type: 3}
 --- !u!4 &7220824459090819858 stripped
@@ -1413,15 +1553,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: -516098083770646512, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Name
       value: Terrain_corner_alt (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b1ed04b018ab6469664a44c2b1ae59, type: 3}
@@ -1493,15 +1648,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: -516098083770646512, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
         type: 3}
       propertyPath: m_Name
       value: Terrain_corner_alt (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09b1ed04b018ab6469664a44c2b1ae59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b1ed04b018ab6469664a44c2b1ae59, type: 3}
@@ -1518,6 +1688,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5739265785136062693}
     m_Modifications:
+    - target: {fileID: -8888591502436945834, guid: 012aa62a24fb94f46baeff71ad4245d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 012aa62a24fb94f46baeff71ad4245d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1573,10 +1748,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4113313142810392835, guid: 012aa62a24fb94f46baeff71ad4245d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 012aa62a24fb94f46baeff71ad4245d0,
         type: 3}
       propertyPath: m_Name
       value: Terrain_4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 012aa62a24fb94f46baeff71ad4245d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9055022704960484834, guid: 012aa62a24fb94f46baeff71ad4245d0,
         type: 3}
@@ -1663,6 +1848,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: log_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8758619897364832339, guid: 9409edc14bb51c44da3e187d73ddcae5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758619897364832339, guid: 9409edc14bb51c44da3e187d73ddcae5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9409edc14bb51c44da3e187d73ddcae5, type: 3}
 --- !u!4 &1883652032948746778 stripped
@@ -1743,6 +1938,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain_corner
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5f7433d2cf5738644a4130c37bbbdf3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2524043748793888525, guid: 5f7433d2cf5738644a4130c37bbbdf3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531270665383298573, guid: 5f7433d2cf5738644a4130c37bbbdf3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f7433d2cf5738644a4130c37bbbdf3f, type: 3}
 --- !u!4 &8068273186570946809 stripped
@@ -1813,16 +2023,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7280100996891579053, guid: a8c80efe80485ec4486c95ae9ca8645d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a8c80efe80485ec4486c95ae9ca8645d,
         type: 3}
       propertyPath: m_Name
       value: Terrain_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a8c80efe80485ec4486c95ae9ca8645d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3450258713416429078, guid: a8c80efe80485ec4486c95ae9ca8645d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: 5613598400230707298, guid: a8c80efe80485ec4486c95ae9ca8645d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8c80efe80485ec4486c95ae9ca8645d, type: 3}
 --- !u!4 &8169869952382165045 stripped
@@ -1893,16 +2118,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7280100996891579053, guid: a8c80efe80485ec4486c95ae9ca8645d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a8c80efe80485ec4486c95ae9ca8645d,
         type: 3}
       propertyPath: m_Name
       value: Terrain_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a8c80efe80485ec4486c95ae9ca8645d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3450258713416429078, guid: a8c80efe80485ec4486c95ae9ca8645d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 881cd81f2e7a4c04b92c9655f85b03c5, type: 2}
+    - target: {fileID: 5613598400230707298, guid: a8c80efe80485ec4486c95ae9ca8645d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8c80efe80485ec4486c95ae9ca8645d, type: 3}
 --- !u!4 &9214293195112203185 stripped

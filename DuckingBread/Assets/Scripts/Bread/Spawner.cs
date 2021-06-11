@@ -131,7 +131,7 @@ public class Spawner : MonoBehaviour
             {
                 if (hit.transform.tag == "Food" || hit.transform.tag == "Ground" || hit.transform.tag == "Duck")
                 {
-                    Debug.Log("Spawned object on " + hit.transform.tag + ". Randomising position again.");
+                  //  Debug.Log("Spawned object on " + hit.transform.tag + ". Randomising position again.");
 
                     return false;
                 }
