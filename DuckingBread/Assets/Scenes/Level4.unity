@@ -14278,6 +14278,11 @@ PrefabInstance:
       propertyPath: SnowMaterials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 85e89f3b829c70a4a85a798f89bd18ed, type: 2}
+    - target: {fileID: 6315715842246413658, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
+        type: 3}
+      propertyPath: nextlevel
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6315715842246413659, guid: bcdbcd0d5d6d08242aace6a99b4246d2,
         type: 3}
       propertyPath: m_Name

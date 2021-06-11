@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public static GameController Instance = null;
     public int lives = 3;
     public GameObject[] ducks;
-   
+
    public float timeToGetMaxSeed;
     public float randomsnowtime;
     public bool SnowEnabled = false;
@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     public GameObject Vignette;
     public GameObject Snow;
     public Material[] SnowMaterials;
+    public int nextlevel=1;
     private void Awake()
     {
         GameController.Instance = this;
@@ -191,5 +192,6 @@ public class GameController : MonoBehaviour
     public void GameWon()
     {
         UIManager.Instance.ToggleWonGameScreen(true);
+       PlayerPrefs.SetInt("levelReached", nextlevel);
     }
 }
