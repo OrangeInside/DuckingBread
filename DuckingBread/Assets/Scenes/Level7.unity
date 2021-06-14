@@ -28154,6 +28154,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Post
       objectReference: {fileID: 0}
+    - target: {fileID: 3412747824774884181, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1398227435253723688}
+    - target: {fileID: 3412747824774884181, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420164516049414019, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1398227435253723688}
+    - target: {fileID: 3420164516049414019, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 3437183121919500596, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -28178,6 +28198,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133716765912193746, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1398227435253723688}
+    - target: {fileID: 7133716765912193746, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Retry
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657788631862702452, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1398227435253723688}
+    - target: {fileID: 7657788631862702452, guid: 4d855e88e4568c848b560f7b06078db0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 7729752221206103713, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
