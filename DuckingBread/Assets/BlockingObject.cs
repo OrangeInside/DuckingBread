@@ -8,13 +8,14 @@ public class BlockingObject : MonoBehaviour
     public Vector3 posA;
     public Vector3 posB;
     public Vector3 nexPos;
+    public float distance =-2.5f;
 
     // Start is called before the first frame update
     void Start()
     {
         posA = transform.position;
         posB = transform.position;
-        posB.y -= 2.5f;
+        posB.y += distance;
        
         nexPos = posB;
       

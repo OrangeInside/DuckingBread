@@ -28,10 +28,12 @@ public class PauseMenu : MonoBehaviour {
 		x.enabled = !x.enabled;
 		if (ui.activeSelf)
 		{
+			AudioListener.pause = true;
 			Time.timeScale = 0f;
 		} 
 		else
 		{
+			AudioListener.pause = false;
 			Time.timeScale = 1f;
 		}
 	}

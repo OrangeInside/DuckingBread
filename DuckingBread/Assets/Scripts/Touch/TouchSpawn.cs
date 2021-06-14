@@ -9,7 +9,7 @@ public class TouchSpawn : MonoBehaviour
 
     [SerializeField] private LayerMask touchDetectionLayer;
     [SerializeField] private LayerMask blocktouchDetectionLayer;
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -19,13 +19,15 @@ public class TouchSpawn : MonoBehaviour
 
             RaycastHit hit;
             RaycastHit hit1;
+            RaycastHit hit2;
             Physics.Raycast(ray, out hit1, Mathf.Infinity, blocktouchDetectionLayer);
-           
+          
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, touchDetectionLayer) && hit1.point == Vector3.zero)
             {
                
                 Instantiate(prefab, hit.point, Quaternion.identity);
             }
+   
            
         }
     }

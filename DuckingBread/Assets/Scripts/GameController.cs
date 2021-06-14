@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     public GameObject Snow;
     public Material[] SnowMaterials;
     public int nextlevel=1;
+ 
     private void Awake()
     {
         GameController.Instance = this;
@@ -56,6 +57,7 @@ public class GameController : MonoBehaviour
         {
             Snow.SetActive(snowing);
         }
+      //  tut.Activate();
     }
 
     void Update()
@@ -186,11 +188,13 @@ public class GameController : MonoBehaviour
 
     public void GameLost()
     {
+      
         UIManager.Instance.ToggleLostGameScreen(true);
     }
 
     public void GameWon()
     {
+        
         UIManager.Instance.ToggleWonGameScreen(true);
        PlayerPrefs.SetInt("levelReached", nextlevel);
     }
