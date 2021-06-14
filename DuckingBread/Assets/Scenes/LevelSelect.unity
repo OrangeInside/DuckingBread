@@ -167,7 +167,7 @@ PrefabInstance:
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level7
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
@@ -460,7 +460,7 @@ PrefabInstance:
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level3
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
@@ -754,7 +754,7 @@ PrefabInstance:
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level4
+      value: Level6
       objectReference: {fileID: 0}
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
@@ -1949,7 +1949,7 @@ PrefabInstance:
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Level5
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
@@ -3140,7 +3140,7 @@ PrefabInstance:
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level2
+      value: Level4
       objectReference: {fileID: 0}
     - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95,
         type: 3}
