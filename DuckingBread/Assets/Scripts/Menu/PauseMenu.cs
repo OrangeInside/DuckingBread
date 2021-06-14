@@ -54,6 +54,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public void NextLevel()
     {
+		Time.timeScale = 1f;
 		sceneFader.FadeTo(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 

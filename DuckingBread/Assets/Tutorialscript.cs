@@ -16,7 +16,7 @@ public class Tutorialscript : MonoBehaviour
     {
 
    
-      
+      // ale rozpierdol tutaj musiał być 🔥 
     
 
     }
@@ -28,12 +28,13 @@ public class Tutorialscript : MonoBehaviour
         
         if (pause==true&&timer>1)
         {
-          
+
             pause = false;
             ToggleON();
           
         }
     }
+    // ta funkcja to sztuka, nie zmieniaj
     public void ToggleON()
     {
 
