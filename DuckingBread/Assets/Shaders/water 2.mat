@@ -89,7 +89,7 @@ Material:
     - DeepWater: {r: 0.39607844, g: 0.827451, b: 0.9254902, a: 0}
     - Shalo: {r: 0, g: 0.5411765, b: 0.7921569, a: 0}
     - Vector2_A8D96CF4: {r: 5, g: 5, b: 0, a: 0}
-    - Vector2_B9172400: {r: 6, g: 6, b: 0, a: 0}
+    - Vector2_B9172400: {r: 2.5, g: 2.5, b: 0, a: 0}
     - Vector2_FDC628: {r: 0, g: 0, b: 0, a: 0}
     - _BASE_COLOR: {r: 1, g: 1, b: 1, a: 1}
     - _EMISSION_COLOR: {r: 0, g: 0, b: 0, a: 0}
