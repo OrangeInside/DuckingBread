@@ -46,7 +46,7 @@ public class Tutorialscript : MonoBehaviour
        
 
          
-            AudioListener.pause = true;
+           // AudioListener.pause = true;
             Time.timeScale = 0f;
         
     
@@ -54,7 +54,7 @@ public class Tutorialscript : MonoBehaviour
     public void ToggleOFF()
     {
         ui.SetActive(!ui.activeSelf);
-        AudioListener.pause = false;
+        //AudioListener.pause = false;
 
         TouchSpawn x = FindObjectOfType<TouchSpawn>();
         x.enabled = !x.enabled;
