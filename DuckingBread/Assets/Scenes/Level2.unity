@@ -11149,6 +11149,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DuckObject (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919058, guid: 221a793edfd529b48a6e8301ac310005,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 246598298164919068, guid: 221a793edfd529b48a6e8301ac310005,
         type: 3}
       propertyPath: waterSurface
@@ -30010,6 +30015,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FastDuck
+      objectReference: {fileID: 0}
+    - target: {fileID: 246598298164919058, guid: fc982e68e749a0d4d91f7818cc92f083,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 246598298164919068, guid: fc982e68e749a0d4d91f7818cc92f083,
         type: 3}
