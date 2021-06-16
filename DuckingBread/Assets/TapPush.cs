@@ -5,7 +5,7 @@ using UnityEngine;
 public class TapPush : MonoBehaviour
 {
     [SerializeField] private LayerMask Ice;
-    public GameObject ice;
+    public float pushdownvalue=0.5f;
     public Vector3 currentpositon;
     public GameController control;
     public float speed = 0.1f;
@@ -36,13 +36,14 @@ public class TapPush : MonoBehaviour
             RaycastHit hit;
           
          
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, Ice)&& Mathf.Abs(this.transform.position.y - posA.y)>1)
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, Ice)&& Mathf.Abs(hit.collider.gameObject.transform.position.y - posA.y)>1)
             {
+              
                 tapped = true;
                 Debug.Log(this.transform.position);
-                currentpositon = transform.position;
-                currentpositon.y += -1f;
-                transform.position = currentpositon;
+                currentpositon = hit.collider.gameObject.transform.position;
+                currentpositon.y += -pushdownvalue;
+                hit.collider.gameObject.transform.position = currentpositon;
 
             }
            
@@ -58,18 +59,11 @@ public class TapPush : MonoBehaviour
         //block.transform.position = x; IEnumerator
         if(tapped)
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(5);
             tapped = false;
         }
-        if ( control.snowing==false)
-        {
-
-            yield return new WaitForSeconds(1);
-            nexPos = nexPos != posA ? posA : posB;
-
-
-        }
-        else if(Vector3.Distance(transform.position, nexPos) <= 0.0001)
+   
+        if(Vector3.Distance(transform.position, nexPos) <= 0.0001 || control.snowing == false)
         {
 
         }

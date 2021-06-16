@@ -196,6 +196,7 @@ public class GameController : MonoBehaviour
     {
         
         UIManager.Instance.ToggleWonGameScreen(true);
+        if (PlayerPrefs.GetInt("levelReached")< nextlevel)
        PlayerPrefs.SetInt("levelReached", nextlevel);
     }
 }

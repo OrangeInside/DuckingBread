@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: e84323b6f36373440af363aa9d61e24d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 878c60fd87cbc0340937500c12a903db, type: 2}
 --- !u!1001 &6496294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -400,7 +400,7 @@ Transform:
   m_GameObject: {fileID: 14650364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.24, y: -1.02, z: 0.36}
-  m_LocalScale: {x: 5.4837484, y: 0.8094918, z: 3.2190697}
+  m_LocalScale: {x: 5.894481, y: 0.8094918, z: 3.2190697}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -23086,6 +23086,9 @@ MonoBehaviour:
   blocktouchDetectionLayer:
     serializedVersion: 2
     m_Bits: 256
+  Icelayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!64 &1291659860
 MeshCollider:
   m_ObjectHideFlags: 0

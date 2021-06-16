@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8745110683067577077}
   - component: {fileID: 8745110683067577079}
   - component: {fileID: 8745110683067577076}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8745110683067577082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.22, y: -1.34, z: 7.18}
+  m_LocalPosition: {x: -6.22, y: -1.22, z: 7.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8745110684511149875}
@@ -150,7 +150,7 @@ MeshCollider:
   m_GameObject: {fileID: 8745110683320014874}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -244,7 +244,7 @@ MeshCollider:
   m_GameObject: {fileID: 8745110684061795260}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8745110684511149875}
   - component: {fileID: 1823265082}
+  - component: {fileID: 956455897796909448}
   m_Layer: 11
   m_Name: Island_4
   m_TagString: Untagged
@@ -316,6 +317,19 @@ MonoBehaviour:
   posB: {x: 0, y: 0, z: 0}
   nexPos: {x: 0, y: 0, z: 0}
   distance: 2.5
+--- !u!65 &956455897796909448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745110684511149872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.7889304, y: 0.9999998, z: 7.3112817}
+  m_Center: {x: -6.501407, y: 0, z: 6.9434233}
 --- !u!1001 &198639978872554176
 PrefabInstance:
   m_ObjectHideFlags: 0
