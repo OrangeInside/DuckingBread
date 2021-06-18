@@ -932,6 +932,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dropdown
       objectReference: {fileID: 0}
+    - target: {fileID: 436842270778250721, guid: dbc6854a42d6ff44dbc35099bdabe39c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 436842270778250722, guid: dbc6854a42d6ff44dbc35099bdabe39c,
         type: 3}
       propertyPath: m_LocalPosition.x

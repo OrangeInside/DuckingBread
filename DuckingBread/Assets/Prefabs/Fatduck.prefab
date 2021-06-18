@@ -5205,7 +5205,7 @@ MonoBehaviour:
   minDistanceToReachPoint: 0.5
   minDistanceBetweenNextPoint: 10
   brakeDistance: 5
-  maxTimeToReachDestination: 15
+  maxTimeToReachDestination: 20
   dashCenterDirectionOffset: 5
   dashObstacleLayers:
     serializedVersion: 2
@@ -5228,8 +5228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gendersMaterial:
-  - {fileID: 2100000, guid: 8dd13ed45c15a0b44a8f24f84f5102a6, type: 2}
-  - {fileID: 2100000, guid: e59e8d0c6f320ca46b35f0d07d2aae00, type: 2}
+  - {fileID: 2100000, guid: 1330d257970a89741a5f8ac4a68b4ea1, type: 2}
+  - {fileID: 2100000, guid: 1330d257970a89741a5f8ac4a68b4ea1, type: 2}
   skin: {fileID: 4218140199376233735}
   duckGender: 0
 --- !u!82 &8931344634213663128
@@ -15092,7 +15092,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8dd13ed45c15a0b44a8f24f84f5102a6, type: 2}
+  - {fileID: 2100000, guid: 1330d257970a89741a5f8ac4a68b4ea1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

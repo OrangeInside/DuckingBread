@@ -76,6 +76,8 @@ public class UIManager : MonoBehaviour
     {
         HPAnimatorLoss.SetTrigger("LosingHP");
         HPAnimatorBump.SetTrigger("LosingHPBump");
+#if UNITY_ANDROID
         Handheld.Vibrate();
+#endif
     }
 }
