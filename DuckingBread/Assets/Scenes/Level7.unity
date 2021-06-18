@@ -19463,7 +19463,7 @@ PrefabInstance:
     - target: {fileID: 3412747824774884181, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextLevel
+      value: Retry
       objectReference: {fileID: 0}
     - target: {fileID: 3412747824774884181, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
@@ -19613,7 +19613,7 @@ PrefabInstance:
     - target: {fileID: 5957214299679350070, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
       propertyPath: m_text
-      value: <color=#93E7FB>Undoubtedly, visibility drops during a snowstorm</color>I
+      value: <color=#93E7FB>Undoubtedly, visibility drops during a snowstorm !</color>
       objectReference: {fileID: 0}
     - target: {fileID: 7133716765912193746, guid: 4d855e88e4568c848b560f7b06078db0,
         type: 3}
