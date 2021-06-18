@@ -81,7 +81,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TotalHeight: 4.33
+    - _TotalHeight: 2.5
     - _WindAmplitude: -0.03
     - _WindTimeMult: 0.1
     - _WorkflowMode: 1
@@ -91,7 +91,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _TopColor: {r: 0.15477037, g: 0.8867924, b: 0.15477037, a: 1}
+    - _TopColor: {r: 0.39607847, g: 0.85098046, b: 0.3019608, a: 1}
 --- !u!114 &195022946650167414
 MonoBehaviour:
   m_ObjectHideFlags: 11
